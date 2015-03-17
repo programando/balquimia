@@ -1,0 +1,40 @@
+#menu
+{
+	   background: #c76b38;
+}
+
+/*
+_____ Opciones del menu ______
+*/
+
+.casa-inicio
+{
+   color: white;
+}
+
+#navbar-brand-inicio
+{
+	   margin-left: -30px;
+}
+
+#navbar-brand-inicio:hover /* Casita = Inicio */
+{
+	   background: #f27f41;
+}
+
+#menu .opciones-menu
+{
+	   color: white;
+}
+
+#menu ul li .opciones-menu:hover
+{
+			background: #f27f41;
+			color     : white;
+}
+
+#menu ul li .opciones-menu:active
+{
+				background: #f27f41;
+			color     : white;
+}

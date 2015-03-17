@@ -1,0 +1,13 @@
+.titulo
+{
+	    color: #c76b38;
+     font-size: 20px;
+     text-align: center;
+}
+
+.text-justyfy /* Estilo de texto */
+{
+	   text-align: justify;
+	   color: black;
+	   font-size: 14px;
+}

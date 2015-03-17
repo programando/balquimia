@@ -1,0 +1,57 @@
+.cont-barra-buscar
+{
+			border    : 3px solid #C76B38;
+			display   : block;
+			float     : right;
+			margin-top: 45px;
+			padding   : 0px;
+			width     : 400px;
+
+			-webkit-border-radius: 8px;
+			-moz-border-radius   : 8px;
+			border-radius        : 8px;
+}
+
+.cont-barra-buscar:hover
+{
+				border    : 3px solid #f27f41;
+}
+
+
+.input-text
+{
+			border     : none;
+			display    : block;
+			float      : left;
+			font-family: cursive;
+			font-size  : 15px;
+			height     : 34px;
+			padding    : 5px 12px;
+			text-align : center;
+			width      : 300px;
+
+		-webkit-border-radius: 4px 0px 0px 4px;
+		-moz-border-radius   : 4px 0px 0px 4px;
+		border-radius        : 4px 0px 0px 4px;
+}
+
+.btn-buscar
+{
+			background: #C76B38;
+			border    : none;
+			color     : white;
+			display   : block;
+			height    : 34px;
+			padding   : 5px 12px;
+			width     : 94px;
+
+			-webkit-border-radius: 0px 4px 4px 0px;
+			-moz-border-radius   : 0px 4px 4px 0px;
+			border-radius        : 0px 4px 4px 0px;
+}
+
+.btn-buscar:hover
+{
+    background: #f27f41;
+}
+

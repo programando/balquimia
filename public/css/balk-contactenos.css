@@ -1,0 +1,136 @@
+.cont-info-pagina
+{
+	   width: 87%;
+	   margin: 10px auto;
+}
+
+/*
+_______ Msj = Validacion ______
+*/
+
+.msj-validacion
+{
+	   display: none;
+    background: #fcd1ba;
+    text-align: center;
+    font-weight: bold;
+
+
+	   -webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	   border-radius: 4px;
+}
+
+.img-malo
+{
+	   width: 15px;
+	   margin-top: -2px;
+}
+
+/*
+____ Text Label = Formulario _____
+*/
+
+.text-label
+{
+    text-align: left;
+	   color: #c76b38;
+	   font-size: 90%;
+}
+
+/*
+______ Barra = Contactos ______
+*/
+
+.barra_contactos
+{
+    border-top: 1px solid  #b5b5b5;
+    padding-top: 10px;
+
+				-webkit-border-radius: 8px;
+				-moz-border-radius   : 8px;
+				border-radius        : 8px;
+}
+
+.titulo_linea
+{
+	  font-weight: bold;
+	  font-size: 15px;
+	  text-align: left;
+	  margin-bottom:  -1px;
+	  color: #c76b38;
+	  display: block;
+}
+
+.Puntos
+{
+		  font-weight: bold;
+	   font-size: 15px;
+	   color: #c76b38;
+	   display: block;
+	   margin-bottom: -1px;
+}
+
+.correo_contacto
+{
+	   text-decoration: underline;
+	   font-size: 14px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+/*
+______ Btn = Enviar_Datos ______
+*/
+
+.cont-btn-datos-enviar
+{
+	   text-align: center;
+}
+
+.btn-enviar-datos
+{
+	   display: block;
+	   padding: 5px;
+	   width: 12%;
+	   min-width: 120px;
+
+	   color: white;
+	   background: #c76b38;
+	   border: none;
+
+	   -webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	   border-radius: 4px;
+	   margin: 15px auto;
+}
+
+.btn-enviar-datos:hover
+{
+	   color: white;
+	   background: #f27f41;
+}
+
+/**/
+
+.img_contactanos2
+{
+	   display: block;
+	   width: 45%;
+	   margin: 10px 0px;
+    float: right;
+	   -webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	   border-radius: 8px;
+}
+
+.img_contactanos1
+{
+	   display: block;
+	   width: 55%;
+	   margin: 10px auto;
+
+	   -webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	   border-radius: 8px;
+}

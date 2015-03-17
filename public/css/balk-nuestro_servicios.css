@@ -1,0 +1,17 @@
+.cont-info-pagina
+{
+	   width: 50%;
+	   margin: 9px auto;
+}
+
+/*
+______ IMG = servicios ________
+*/
+
+.img-servicios
+{
+	   display: block;
+	   width: 100%;
+	   height: 250px;
+    margin-top: -5px;
+}

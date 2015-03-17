@@ -1,0 +1,22 @@
+.cont-pgn-linea-product
+{
+	   width: 90%;
+	   margin: 0px auto;
+}
+
+/*
+____ IMG = Demostracion
+         Linea de Productos _____
+*/
+
+.img-line-product
+{
+	   margin-bottom: 20px;
+}
+
+.img-line-product:hover
+{
+				-webkit-box-shadow: 	0px 5px 10px #3f3f3f;
+				-moz-box-shadow   : 	0px 5px 10px #3f3f3f;
+				box-shadow        : 	0px 0px 5px 1#3f3f3f;
+}
