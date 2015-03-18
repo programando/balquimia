@@ -1,6 +1,17 @@
 // Validacion De formulario = Contactanos
 
 $(document).ready(function(){
+
+
+var $nombre1    = $('#nombre_completo');
+
+$('#nombre_completo').on('focus',function(){
+  $nombre1.css('background','white') ;
+  $nombre1.css('color','black') ;
+  $nombre1.val('');
+
+})
+
 	  $('#btn_enviar_datos').on('click',function(){
 
 								var $nombre    = $('#nombre_completo').val();  // Nombre Completo
@@ -13,13 +24,15 @@ $(document).ready(function(){
 								var $telefono  = $('#telefono').val();         // Telefono
 								var $mensaje   = $('#mensaje').val();          // Mensaje
 
-            if($nombre  == ''){
-               $('#msj-validacion-nombre').fadeIn();
-               $('#nombre_completo').focus();
-               return false;
-            }else{
-               $('#msj-validacion-nombre').fadeOut();
-            }
+
+if ($nombre1.val()=='')
+{
+  $nombre1.css('background','red') ;
+  $nombre1.css('color','white') ;
+  $nombre1.val('Registre el nombre');
+}
+
+
 
             if($ciudad  == ''){
                $('#msj-validacion-ciudad').fadeIn();

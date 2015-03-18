@@ -1,8 +1,9 @@
 .cont-info-pagina
 {
-	   width: 87%;
+	   width: 80%;
 	   margin: 10px auto;
 }
+
 
 /*
 _______ Msj = Validacion ______
@@ -35,7 +36,7 @@ ____ Text Label = Formulario _____
 {
     text-align: left;
 	   color: #c76b38;
-	   font-size: 90%;
+
 }
 
 /*
@@ -50,33 +51,32 @@ ______ Barra = Contactos ______
 				-webkit-border-radius: 8px;
 				-moz-border-radius   : 8px;
 				border-radius        : 8px;
+				font-size: 13px;
 }
 
 .titulo_linea
 {
 	  font-weight: bold;
-	  font-size: 15px;
 	  text-align: left;
-	  margin-bottom:  -1px;
 	  color: #c76b38;
 	  display: block;
+	  margin-bottom: -1px;
 }
 
 .Puntos
 {
 		  font-weight: bold;
-	   font-size: 15px;
 	   color: #c76b38;
 	   display: block;
 	   margin-bottom: -1px;
+
 }
 
 .correo_contacto
 {
 	   text-decoration: underline;
-	   font-size: 14px;
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: -1px;
 }
 
 /*
