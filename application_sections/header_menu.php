@@ -2,7 +2,7 @@
      Estilos Css => Carpeta CSS => balk-menu.css
             **********  Menu  **********      -->
 
-<div class="col-lg-12 col-md-12 col-sm-12" style="padding: 0px;">
+<div class="col-lg-12 col-md-12 col-sm-12">
     <div ><!-- Contenedor -->
 
 						  <nav class="navbar   navbar-default " id="menu"><!-- Menu -->
