@@ -5,6 +5,13 @@
 	   text-align: center;
 	   padding: 10px;
 	   display: block;
-	   margin-top: 15px;
+    width: 100%;
+
 }
 
+.footer_balquimia
+{
+    display: block;
+    bottom: 0px;
+    width: 100%;
+}
