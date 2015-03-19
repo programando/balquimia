@@ -15,3 +15,14 @@ ______ IMG = servicios ________
 	   height: 250px;
     margin-top: -5px;
 }
+
+/*
+_____
+      Efecto Activo en el menu  _______
+*/
+
+.cinco_balk /* = Nuestros Servicios */
+{
+			background: #f27f41;
+			color     : white;
+}

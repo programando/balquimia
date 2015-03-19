@@ -3,3 +3,16 @@
 	   width: 50%;
 	   margin: 9px auto;
 }
+
+/*
+_____
+      Efecto Activo en el menu  _______
+*/
+
+.dos_balk  /* = Desarrollo de Productos */
+{
+			background: #f27f41;
+			color     : white;
+}
+
+

@@ -1,7 +1,6 @@
 #menu
 {
 	   background: #c76b38;
-	   font-size: 17px;
 	   width: 100%;
 	   border: 1px solid #c76b38;
 }
@@ -28,6 +27,12 @@ _____ Opciones del menu ______
 #menu .opciones-menu
 {
 	   color: white;
+}
+
+#menu ul li
+{
+   margin-left: 5px;
+   display: block;
 }
 
 #menu ul li .opciones-menu:hover
