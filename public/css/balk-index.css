@@ -15,3 +15,15 @@ _______ Slider _________
   margin-top: 5px;
 }
 
+
+
+/*
+_____
+      Efecto Activo en el menu  _______
+*/
+
+ .navbar-brand
+{
+			background: #f27f41;
+			color     : white;
+}

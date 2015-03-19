@@ -1,4 +1,4 @@
-.cont-logo-balk
+.cont-logo
 {
 		display    : block;
 }
@@ -9,5 +9,5 @@
 {
 		display    : block;
 		padding    : 5px;
-		height     :  160px;
-}
+
+	}
