@@ -7,7 +7,7 @@
        <div class="cont-barra-buscar"><!-- Contenedor -->
 
             <div><!-- input -->
-                <input type="text" class=" input-text" placeholder=".. Buscar Con Balquimia..">
+                <input type="text" class=" input-text" placeholder=".. Buscar en Balquimia..">
             </div><!-- input -->
 
             <div><!-- Btn = Buscar -->
