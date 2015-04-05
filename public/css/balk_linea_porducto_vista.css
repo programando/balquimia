@@ -1,0 +1,77 @@
+.cont-pagina
+{
+	    width: 95%;
+	    margin: 0px auto;
+}
+
+/*
+___ Barra = Menu-left ____
+*/
+
+.panel-title
+{
+		   color: #C76B38;
+	   font-weight: bold;
+}
+.titulos_panel
+{
+	   display: block;
+	   width: 100%;
+	   font-size: 14px;
+}
+
+.titulos_panel:hover
+{
+	   text-decoration: none;
+}
+
+.list-productos
+{
+	   color: red;
+	   font-size: 13px;
+	   color: black;
+	   padding-left: 10px;
+
+}
+
+.list-productos:hover
+{
+	   color: #C76B38;
+     text-decoration: none;
+}
+
+/*
+_____ Productos _____
+*/
+.cont-productos
+{
+     display: block;
+     margin-top: 20px;
+}
+
+.producto
+{
+	    display: block;
+     padding:  8px;
+     background: #C76B38;
+     text-align: center;
+     color: white;
+     font-size: 15px;
+     font-weight: bold;
+     cursor: pointer;
+
+     -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+     border-radius: 8px;
+
+
+}
+
+.producto:hover
+{
+					background: #F27F41;
+
+					-webkit-box-shadow: 0px 1px 2px #000;
+					-moz-box-shadow: 0px 1px 2px #000;
+					box-shadow: 0px 1px 2px #000;
+}
