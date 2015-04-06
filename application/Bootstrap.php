@@ -1,3 +1,6 @@
+
+
+
 <?php
 /**
  * SEP 10 DE 2014
@@ -41,8 +44,7 @@ class Bootstrap
                 call_user_func(array($Controller, $Metodo));
             }
 
-        } else {
-            //Debug::Mostrar($RutaControlador);
+        } else {s
             throw new Exception(header('Location: ' . BASE_URL .'views/error/404.php'));
 
         }
