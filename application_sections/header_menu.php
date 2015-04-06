@@ -29,13 +29,13 @@
 						    <!--- Campos de la pagina -->
 						      <ul class="nav navbar-nav">
 
-																<li class="uno_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>Empresa/nuestra_empresa">Nuestra Empresa</a></li>
-																<li class="dos_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>Empresa/desarrollo_de_productos">Desarrollo De Productos</a></li>
-																<li class="tres_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>Empresa/linea_de_productos">Línea De Productos     </a></li>
-																<li class="cuatro_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>Empresa/contro_de_calidad">Control De Calidad     </a></li>
-																<li class="cinco_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>Empresa/nuestros_servicios">Nuestros Servicios     </a></li>
-																<li class="seis_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>Empresa/nuestros_clientes">Nuestros Clientes      </a></li>
-																<li class="siete_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>Empresa/contactanos">Contáctenos            </a></li>
+																<li class="uno_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/nuestra_empresa">Nuestra Empresa</a></li>
+																<li class="dos_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/desarrollo_de_productos">Desarrollo de Productos</a></li>
+																<li class="tres_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>productos/linea_de_productos">Línea de Productos     </a></li>
+																<li class="cuatro_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/contro_de_calidad">Control de Calidad     </a></li>
+																<li class="cinco_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/nuestros_servicios">Nuestros Servicios     </a></li>
+																<li class="seis_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/nuestros_clientes">Nuestros Clientes      </a></li>
+																<li class="siete_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/contactanos">Contáctenos            </a></li>
 
 						      </ul>
 						     <!--- Campos de la pagina -->

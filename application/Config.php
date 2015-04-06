@@ -31,6 +31,7 @@
  define('BASE_IMG_SERVICIOS',               BASE_URL .'public/images/nuestros_servicios/');
  define('BASE_IMG_CLIENTES',                BASE_URL .'public/images/nuestros_clientes/');
  define('BASE_IMG_CONTACTANOS',             BASE_URL .'public/images/contactanos/');
+  define('BASE_IMG_LINEA_SELEC',             BASE_URL .'public/images/linea_productos_seleccionada/');
 
 
 

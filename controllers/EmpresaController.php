@@ -24,19 +24,9 @@
        $this->View->Mostrar_Vista('desarrollo_productos');
      }
 
-     public function linea_de_productos()
-     {
-       $this->View->SetCss(array('balk-linea_productos','balk_estilos_generales'));
-       $this->View->SetJs(array('balk_velocidad_slider'));
-       $this->View->Mostrar_Vista('linea_productos');
-     }
 
-    public function linea_producto_vista()
-    {
-        $this->View->SetCss(array('balk-linea_productos','balk_linea_porducto_vista','balk_estilos_generales'));
-        $this->View->SetJs(array('balk_velocidad_slider'));
-        $this->View->Mostrar_Vista('linea_porducto_vista');
-    }
+
+
 
     public function contro_de_calidad()
     {
