@@ -22,6 +22,10 @@ _____ Opciones del menu ______
 #navbar-brand-inicio:hover /* Casita = Inicio */
 {
 	   background: #f27f41;
+
+			-webkit-transition: all 600ms ease;
+			-moz-transition   : all 600ms ease;
+			transition        : all 600ms ease;
 }
 
 #menu .opciones-menu
@@ -39,6 +43,10 @@ _____ Opciones del menu ______
 {
 			background: #f27f41;
 			color     : white;
+
+			-webkit-transition: all 600ms ease;
+			-moz-transition   : all 600ms ease;
+			transition        : all 600ms ease;
 }
 
 #menu ul li .opciones-menu:active

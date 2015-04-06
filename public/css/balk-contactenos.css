@@ -14,6 +14,10 @@ _____
 {
 			background: #f27f41;
 			color     : white;
+
+			-webkit-border-radius: 10px ;
+			-moz-border-radius   : 10px ;
+			border-radius        : 10px ;
 }
 
 

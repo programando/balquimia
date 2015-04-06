@@ -3,7 +3,7 @@
     Estilos Css => Carpeta CSS => balk-header_navegador.css
         ****** Header = Navegadro = buscar ******        -->
 
-   <div class="  col-lg-5 col-md-5 col-sm-5"><!-- Input = Buscar -->
+   <div class="well col-lg-5 col-md-5 col-sm-5"><!-- Input = Buscar -->
        <div class="cont-barra-buscar"><!-- Contenedor -->
 
             <div><!-- input -->

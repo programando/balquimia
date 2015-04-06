@@ -44,7 +44,7 @@ class Bootstrap
                 call_user_func(array($Controller, $Metodo));
             }
 
-        } else {s
+        } else {
             throw new Exception(header('Location: ' . BASE_URL .'views/error/404.php'));
 
         }

@@ -12,12 +12,14 @@ ___ Barra = Menu-left ____
 {
 		   color: #C76B38;
 	   font-weight: bold;
+	   border: none;
 }
 .titulos_panel
 {
 	   display: block;
 	   width: 100%;
 	   font-size: 14px;
+	   border: none;
 }
 
 .titulos_panel:hover
@@ -25,19 +27,25 @@ ___ Barra = Menu-left ____
 	   text-decoration: none;
 }
 
+#cuerpo_categorias-linea
+{
+     border: none;
+     padding: 0px;
+     width: 80%;
+     margin: 0px auto;
+}
+
 .list-productos
 {
-	   color: red;
 	   font-size: 13px;
 	   color: black;
-	   padding-left: 10px;
-
+	   text-decoration: none;
 }
 
 .list-productos:hover
 {
 	   color: #C76B38;
-     text-decoration: none;
+    text-decoration: none;
 }
 
 /*
@@ -59,19 +67,18 @@ _____ Productos _____
      font-size: 15px;
      font-weight: bold;
      cursor: pointer;
+     margin-bottom: 10px;
 
-     -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-     border-radius: 8px;
-
-
+					-webkit-border-radius: 8px;
+					-moz-border-radius   : 8px;
+					border-radius        : 8px;
 }
 
 .producto:hover
 {
 					background: #F27F41;
 
-					-webkit-box-shadow: 0px 1px 2px #000;
-					-moz-box-shadow: 0px 1px 2px #000;
-					box-shadow: 0px 1px 2px #000;
+					-webkit-transition: all 500ms ease;
+					-moz-transition   : all 500ms ease;
+					transition        : all 500ms ease;
 }
