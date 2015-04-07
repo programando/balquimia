@@ -11,105 +11,93 @@
 
        <div class="row"><!-- Barra linea productos -->
 
-      <!-- =========( Menu = Lineas )========= -->
-               <div class="col-lg-3 col-md-3 col-sm-3">
-                <div class="cont-barra-left"><!-- Contenedor -->
-                 <div class="panel-group" id="accordion"><!--Contenido de los paneles -->
+        <!-- =========( Menu = Lineas )========= -->
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <div class="cont-barra-left"><!-- Contenedor -->
+           <div class="panel-group" id="accordion"><!--Contenido de los paneles -->
 
-                  <?php
-                    $i= 1;
-                    foreach ($this->Categorias as $Categorias)
-                  {
-                    $nomcategoria = trim($Categorias['nomcategoria']);
-                    $idcategoria  = $Categorias['idcategoria'];
-                    $id           = 'item'.$idcategoria;
-                  ?>
-                   <div class="panel"><!--Panel -->
-                     <div class="panel-heading cabezera-panel">
-                       <h4 class="panel-title">
-                        <a class="titulos_panel" href="#<?=$id ;?>" data-toggle="collapse"   data-parent="#accordion">
-                          <?= $nomcategoria ;?>
-                        </a><!-- titulo -->
-                      </h4>
-                    </div>
-                    <?php if ($i==1) :;?>
-                      <div id="<?=$id ;?>" class="panel-collapse collapse in"><!-- Cuerpo del panel -->
-                    <?php else :;?>
-                      <div id="<?=$id ;?>" class="panel-collapse collapse"><!--  Cuerpo del panel -->
-                     <?php endif;?>
+            <?php
+            $i= 1;
+            foreach ($this->Categorias as $Categorias)
+            {
+              $nomcategoria = trim($Categorias['nomcategoria']);
+              $idcategoria  = $Categorias['idcategoria'];
+              $id           = 'categoria'.$idcategoria;
+              ?>
+              <div class="panel"><!--Panel -->
+               <div class="panel-heading cabezera-panel">
+                 <h4 class="panel-title">
+                  <a class="titulos_panel" href="#<?=$id ;?>" data-toggle="collapse"   data-parent="#accordion"
+                    idcategoria= <?=$idcategoria ;?> >
+                    <?= $nomcategoria ;?>
+                  </a><!-- titulo -->
+                </h4>
+              </div>
+              <?php if ($i==1) :;?>
+                <div id="<?=$id ;?>" class="panel-collapse collapse in"><!-- Cuerpo del panel -->
+                <?php else :;?>
+                  <div id="<?=$id ;?>" class="panel-collapse collapse"><!--  Cuerpo del panel -->
+                  <?php endif;?>
 
-                     <div class="panel-body" id="cuerpo_categorias-linea">
-                       <ul class="list-unstyled accordion" id="accordion"><!-- Menu accordion-->
-                       <?php foreach ($this->SubCategorias as $SubCategorias)
-                       {
-                          $nomsubcategoria     = $SubCategorias['nomsubcategoria'];
-                          $idcategoria_detalle = $SubCategorias['idcategoria'];
-                          $idsubcategoria      = $SubCategorias['idsubcategoria'];
-                          if ($idcategoria == $idcategoria_detalle){
+                  <div class="panel-body" id="cuerpo_categorias-linea">
+                   <ul class="list-unstyled accordion" id="accordion"><!-- Menu accordion-->
+                     <?php foreach ($this->SubCategorias as $SubCategorias)
+                     {
+                      $nomsubcategoria     = $SubCategorias['nomsubcategoria'];
+                      $idcategoria_detalle = $SubCategorias['idcategoria'];
+                      $idsubcategoria      = $SubCategorias['idsubcategoria'];
+                      if ($idcategoria == $idcategoria_detalle){
                         ?>
-                           <li><a class="list-productos" href="#"><?=$nomsubcategoria ;?> </a></li>
-
-
+                        <li><a class="list-productos"
+                        idsubcategoria = <?= $idsubcategoria ;?>
+                        idcategoria= <?=$idcategoria ;?>
+                        href="#"><?=$nomsubcategoria ;?> </a></li>
                         <?php }} ;?>
                       </ul><!--Menu accordion -->
-
                     </div>
                   </div>
-
                 </div><!--Panel -->
-                 <?php $i++; } ;?>
-
+                <?php $i++; } ;?>
               </div><!--Contenido de los paneles -->
-
-
             </div><!-- Contenedor -->
           </div>
-      <!-- =========( Menu = Lineas )========= -->
+          <!-- =========( Menu = Lineas )========= -->
 
-      <!-- =========( Parte de Los Productos )========= -->
+          <!-- =========( Parte de Los Productos )========= -->
+          <div class="contenido_interno">
            <div class="col-lg-9 col-md-9 col-sm-9">
-                 <div><!-- Contenedor -->
+             <div><!-- Contenedor -->
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div><!-- IMG = Linea Seleccionada -->
+                  <img src="<?= BASE_IMG_LINEA_SELEC.$this->Imagen_Cabecera  ;?>" class="img-responsive">
+                </div><!-- IMG = Linea Seleccionada -->
+              </div>
 
-                      <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div><!-- IMG = Linea Seleccionada -->
-                              <img src="<?= BASE_IMG_LINEA_SELEC ;?>img_alimentaria.png" class="img-responsive">
-                        </div><!-- IMG = Linea Seleccionada -->
+              <div class="col-lg-12 col-md-12 col-sm-12">
+
+
+                <!-- ======( Fila De Productos )====== -->
+                <div class="row">
+
+                    <?php
+                    foreach ($this->Productos as $Producto)
+                    {
+                      $nomproducto = $Producto['nomproducto']
+                      ?>
+                      <div class="col-lg-3 col-md-3 col-sm-3">
+                       <div class="producto">
+                        <?= $nomproducto ;?>
                       </div>
+                    </div>
+                    <?php } ;?>
 
-                      <div class="col-lg-12 col-md-12 col-sm-12">
-                         <div class="cont-productos"><!-- Contenedor -->
+                </div><!-- ======( Fila De Productos )====== -->
+              </div>
+            </div><!-- Contenedor -->
+          </div>
+        </div>
 
-                          <!-- ======( Fila De Productos )====== -->
-                            <div class="row">
-                                   <div class=" col-lg-3">
-                                       <div class="producto">
-                                            Producto CITROXYTRON
-                                       </div>
-                                   </div>
-                                   <div class=" col-lg-3">
-                                       <div class="producto">
-                                            Producto CITROXYTRON
-                                       </div>
-                                   </div>
-                                   <div class=" col-lg-3">
-                                       <div class="producto">
-                                            Producto CITROXYTRON
-                                       </div>
-                                   </div>
-                                   <div class=" col-lg-3">
-                                       <div class="producto">
-                                            Producto CITROXYTRON
-                                       </div>
-                                   </div>
-                             </div>
-                          <!-- ======( Fila De Productos )====== -->
-
-                          </div>
-                      </div>
-
-                 </div><!-- Contenedor -->
-            </div>
-      <!-- =========( Parte de Los Productos )========= -->
-</div>
-</div>
-</div><!-- Cont = Principal -->
+        <!-- =========( Parte de Los Productos )========= -->
+      </div>
+    </div>
+  </div><!-- Cont = Principal -->

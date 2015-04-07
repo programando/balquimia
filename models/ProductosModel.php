@@ -20,6 +20,13 @@
 					return 	$SubCategorias;
 				}
 
+				public function Productos_x_Categoria($idcategoria)
+				{
+					$Productos = $this->Db->Ejecutar_Sp("balquimia_productos_x_categoria($idcategoria)");
+					return 	$Productos;
+				}
+
+
 				public function Productos_x_SubCategoria($id_subcategoria)
 				{
 					$Productos = $this->Db->Ejecutar_Sp("balquimia_productos_x_id_subcategoria($id_subcategoria)");
