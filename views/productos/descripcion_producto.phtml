@@ -1,10 +1,9 @@
 <!--
-    Estilos Css => Carpeta Css => balk_linea_porducto_vista.css ,
+    Estilos Css => Carpeta Css => balk_linea_porducto_vista.css  ,
                                   balk_estilos_generales.css
-    *** Cuando se selecciona una linea de producto se carga esta vista con sus productos
-     y descripciones ****
+    **********  Descripcion del producto **********
    -->
-   <div class="cont-pagina"><!-- Cont = Principal -->
+ <div class="cont-pagina"><!-- Cont = Principal -->
      <div class="row">
 
        <!-- /// Section = Info-Productos /// -->
@@ -74,31 +73,20 @@
                   </div><!-- IMG = Linea Seleccionada -->
 
                   <div><!-- Titulo -->
-                       <h4 class="titulo_linea_seleccionada">Linea Alimentaria</h4>
+                       <h4 class="titulo_linea_seleccionada">CITROXYTRON</h4>
                   </div><!-- Titulo -->
 
               </div>
 
               <div class="col-lg-12 col-md-12 col-sm-12">
-                  <div class="cont-presentacion-productos">
-                      <!-- ======( Fila De Productos )====== -->
-                        <div class="row">
-
-                            <?php
-                            foreach ($this->Productos as $Producto)
-                            {
-                              $nomproducto = $Producto['nomproducto']
-                              ?>
-                              <div class="col-lg-6 col-md-6 col-sm-6">
-                               <div class="producto">
-                                <?= $nomproducto ;?>
-                              </div>
-                            </div>
-                            <?php } ;?>
-
-                        </div>
-                      <!-- ======( Fila De Productos )====== -->
-                  </div>
+              	   <div>
+              	   	   <p class="text-justify descripcion">
+																											Desinfectante orgánico con oxigeno activo en medio ácido de
+																											elevado poder, efectivo frente a un amplio espectro de microorganismos.
+																											Especialmente diseñado para plantas procesadoras de alimentos en general,
+																											garantizando la higiene y seguridad que se requiere en este tipo de procesos.
+              	   	    </p>
+              	   </div>
               </div>
             </div><!-- Contenedor -->
           </div>

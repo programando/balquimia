@@ -4,6 +4,15 @@
 	    margin: -11px auto;
 }
 
+/**/
+
+.descripcion
+{
+     display: block;
+     width: 80%;
+     margin: 0px auto;
+}
+
 /*
 ___ Barra = Menu-left ____
 */
