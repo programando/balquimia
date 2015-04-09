@@ -3,3 +3,6 @@
 $('.carousel').carousel({
 	    interva: 1000
 });
+
+
+

@@ -10,30 +10,15 @@
 
     public function Index(){}
 
-    public function descripcion_producto()
+    public function buscar_producto()
     {/**  ABRIL 06 DE 2015
       *       INICIA LA PRESENTACION DE PRODUCTOS EN CADA UNA DE LAS CATEGORIAS. MUESTRA INICIALMENTE, LOS PRODUCTOS DE ALIMENTARIA
       */
-        $idcategoria                 = General_Functions::Validar_Entrada('idcategoria','NUM');
-        $this->View->Categorias      = $this->Productos->Categorias_Consultar();
-        $this->View->SubCategorias   = $this->Productos->SubCategorias_Consultar();
-        $this->View->SetCss(array('balk-linea_productos','balk_linea_porducto_vista','balk_estilos_generales'));
-        $this->View->SetJs(array('balk_velocidad_slider','balk_lineas'));
-
-
-        if ($idcategoria == null or empty($idcategoria ))
-        {
-          $idcategoria                 = 5;// Consultar productos de alimentaria, primera categoria.
-          $this->View->Productos       = $this->Productos->Productos_x_Categoria($idcategoria);
-          $this->View->Imagen_Cabecera = $idcategoria.'.png';
-          $this->View->Mostrar_Vista('descripcion_producto');
-        }else
-        {
-          $this->View->Productos       = $this->Productos->Productos_x_Categoria($idcategoria);
-          $this->View->Imagen_Cabecera = $idcategoria.'.png';
-          $this->View->Mostrar_Vista_Parcial('linea_porducto_vista_parcial');
-
-        }
+        $idproducto                              = General_Functions::Validar_Entrada('idproducto','NUM');
+        $Producto = $this->Productos->Productos_x_Buscar_por_IdProducto($idproducto );
+        $this->View->NombreProducto              = $Producto[0]['nomproducto'];
+        $this->View->Descripcion_Producto        = $Producto[0]['descripcion'];
+        $this->View->Mostrar_Vista_Parcial('descripcion_producto');
       }
 
 
@@ -41,12 +26,13 @@
     {/**  ABRIL 06 DE 2015
       *       INICIA LA PRESENTACION DE PRODUCTOS EN CADA UNA DE LAS CATEGORIAS. MUESTRA INICIALMENTE, LOS PRODUCTOS DE ALIMENTARIA
       */
-        $idcategoria                 = General_Functions::Validar_Entrada('idcategoria','NUM');
-        $this->View->Categorias      = $this->Productos->Categorias_Consultar();
-        $this->View->SubCategorias   = $this->Productos->SubCategorias_Consultar();
+        $idcategoria                    = General_Functions::Validar_Entrada('idcategoria','NUM');
+        $this->View->Categorias         = $this->Productos->Categorias_Consultar();
+        $this->View->SubCategorias      = $this->Productos->SubCategorias_Consultar();
+        $this->View->Texto_SubCategoria ='Todos los Productos';
+
         $this->View->SetCss(array('balk-linea_productos','balk_linea_porducto_vista','balk_estilos_generales'));
         $this->View->SetJs(array('balk_velocidad_slider','balk_lineas'));
-
 
         if ($idcategoria == null or empty($idcategoria ))
         {
@@ -54,20 +40,38 @@
           $this->View->Productos       = $this->Productos->Productos_x_Categoria($idcategoria);
           $this->View->Imagen_Cabecera = $idcategoria.'.png';
           $this->View->Mostrar_Vista('linea_porducto_vista');
+
         }else
         {
           $this->View->Productos       = $this->Productos->Productos_x_Categoria($idcategoria);
           $this->View->Imagen_Cabecera = $idcategoria.'.png';
           $this->View->Mostrar_Vista_Parcial('linea_porducto_vista_parcial');
-
         }
+    }
+
+
+    public function productos_por_categoria($idcategoria )
+    {/**  ABRIL 06 DE 2015
+      *       INICIA LA PRESENTACION DE PRODUCTOS EN CADA UNA DE LAS CATEGORIAS. MUESTRA INICIALMENTE, LOS PRODUCTOS DE ALIMENTARIA
+      */
+        $this->View->Texto_SubCategoria ='Todos los Productos';
+        $this->View->Categorias         = $this->Productos->Categorias_Consultar();
+        $this->View->SubCategorias      = $this->Productos->SubCategorias_Consultar();
+        $this->View->Productos          = $this->Productos->Productos_x_Categoria($idcategoria);
+        $this->View->Imagen_Cabecera    = $idcategoria.'.png';
+
+        $this->View->SetCss(array('balk-linea_productos','balk_linea_porducto_vista','balk_estilos_generales'));
+        $this->View->SetJs(array('balk_velocidad_slider','balk_lineas'));
+        $this->View->Mostrar_Vista('linea_porducto_vista');
     }
 
 
     public function productos_subcategorias()
     {
-      $idcategoria    = General_Functions::Validar_Entrada('idcategoria','NUM');
-      $idsubcategoria = General_Functions::Validar_Entrada('idsubcategoria','NUM');
+      $idcategoria                    = General_Functions::Validar_Entrada('idcategoria','NUM');
+      $idsubcategoria                 = General_Functions::Validar_Entrada('idsubcategoria','NUM');
+      $nomsubcategoria                = General_Functions::Validar_Entrada('nomsubcategoria','TEXT');
+      $this->View->Texto_SubCategoria = $nomsubcategoria ;
       $this->View->Productos       = $this->Productos->Productos_x_SubCategoria($idsubcategoria);
       $this->View->SetCss(array('balk-linea_productos','balk_linea_porducto_vista','balk_estilos_generales'));
       $this->View->SetJs(array('balk_velocidad_slider','balk_lineas'));

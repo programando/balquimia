@@ -1,98 +1,14 @@
-<!--
-    Estilos Css => Carpeta Css => balk_linea_porducto_vista.css  ,
-                                  balk_estilos_generales.css
-    **********  Descripcion del producto **********
-   -->
- <div class="cont-pagina"><!-- Cont = Principal -->
-     <div class="row">
 
-       <!-- /// Section = Info-Productos /// -->
+<div><!-- Titulo -->
+   <h4 class="titulo_linea_seleccionada"><?=$this->NombreProducto ;?></h4>
+ </div><!-- Titulo -->
 
-       <div class="row"><!-- Barra linea productos -->
+<div class="col-lg-12 col-md-12 col-sm-12">
+	   <div>
+	   	   <p class="text-justify descripcion">
+              <?=$this->Descripcion_Producto ;?>
+	   	    </p>
+	   </div>
+</div>
 
-        <!-- =========( Menu = Lineas )========= -->
-        <div class="col-lg-3 col-md-3 col-sm-3">
-          <div class="cont-barra-left"><!-- Contenedor -->
-           <div class="panel-group" id="accordion"><!--Contenido de los paneles -->
 
-            <?php
-            $i= 1;
-            foreach ($this->Categorias as $Categorias)
-            {
-              $nomcategoria = trim($Categorias['nomcategoria']);
-              $idcategoria  = $Categorias['idcategoria'];
-              $id           = 'categoria'.$idcategoria;
-              ?>
-              <div class="panel"><!--Panel -->
-               <div class="panel-heading cabezera-panel">
-                 <h4 class="panel-title">
-                  <a class="titulos_panel" href="#<?=$id ;?>" data-toggle="collapse"   data-parent="#accordion"
-                    idcategoria= <?=$idcategoria ;?> >
-                    <?= $nomcategoria ;?>
-                  </a><!-- titulo -->
-                </h4>
-              </div>
-              <?php if ($i==1) :;?>
-                <div id="<?=$id ;?>" class="panel-collapse collapse in"><!-- Cuerpo del panel -->
-                <?php else :;?>
-                  <div id="<?=$id ;?>" class="panel-collapse collapse"><!--  Cuerpo del panel -->
-                  <?php endif;?>
-
-                  <div class="panel-body" id="cuerpo_categorias-linea">
-                   <ul class="list-unstyled accordion" id="accordion"><!-- Menu accordion-->
-                     <?php foreach ($this->SubCategorias as $SubCategorias)
-                     {
-                      $nomsubcategoria     = $SubCategorias['nomsubcategoria'];
-                      $idcategoria_detalle = $SubCategorias['idcategoria'];
-                      $idsubcategoria      = $SubCategorias['idsubcategoria'];
-                      if ($idcategoria == $idcategoria_detalle){
-                        ?>
-                        <li><a class="list-productos"
-                        idsubcategoria = <?= $idsubcategoria ;?>
-                        idcategoria= <?=$idcategoria ;?>
-                        href="#"><?=$nomsubcategoria ;?> </a></li>
-                        <?php }} ;?>
-                      </ul><!--Menu accordion -->
-                    </div>
-                  </div>
-                </div><!--Panel -->
-                <?php $i++; } ;?>
-              </div><!--Contenido de los paneles -->
-            </div><!-- Contenedor -->
-          </div>
-          <!-- =========( Menu = Lineas )========= -->
-
-          <!-- =========( Parte de Los Productos )========= -->
-          <div class="contenido_interno">
-           <div class="col-lg-9 col-md-9 col-sm-9">
-             <div><!-- Contenedor -->
-              <div class="col-lg-12 col-md-12 col-sm-12">
-
-                  <div><!-- IMG = Linea Seleccionada -->
-                    <img src="<?= BASE_IMG_LINEA_SELEC.$this->Imagen_Cabecera  ;?>" class="img-responsive img-linea-seleccionada">
-                  </div><!-- IMG = Linea Seleccionada -->
-
-                  <div><!-- Titulo -->
-                       <h4 class="titulo_linea_seleccionada">CITROXYTRON</h4>
-                  </div><!-- Titulo -->
-
-              </div>
-
-              <div class="col-lg-12 col-md-12 col-sm-12">
-              	   <div>
-              	   	   <p class="text-justify descripcion">
-																											Desinfectante orgánico con oxigeno activo en medio ácido de
-																											elevado poder, efectivo frente a un amplio espectro de microorganismos.
-																											Especialmente diseñado para plantas procesadoras de alimentos en general,
-																											garantizando la higiene y seguridad que se requiere en este tipo de procesos.
-              	   	    </p>
-              	   </div>
-              </div>
-            </div><!-- Contenedor -->
-          </div>
-        </div>
-
-        <!-- =========( Parte de Los Productos )========= -->
-      </div>
-    </div>
-  </div><!-- Cont = Principal -->

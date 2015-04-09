@@ -1,4 +1,10 @@
 
+$('.contenido_interno').on('click','.producto',function(){
+		$idproducto = $(this).attr('id');
+		Parametros = {'idproducto':$idproducto };
+		Buscar_Informacion_Producto(Parametros);
+})
+
 $('.titulos_panel').on('click',function(){
 		$idcategoria = $(this).attr('idcategoria');
 		Parametros   = {'idcategoria':$idcategoria};
@@ -7,11 +13,27 @@ $('.titulos_panel').on('click',function(){
 });
 
 $('.list-productos').on('click',function(){
-			$idsubcategoria = $(this).attr('idsubcategoria');
-			$idcategoria    = $(this).attr('idcategoria');
-			Parametros      = {'idcategoria':$idcategoria, 'idsubcategoria':$idsubcategoria};
+			$idsubcategoria  =  $(this).attr('idsubcategoria');
+			$idcategoria     =  $(this).attr('idcategoria');
+			$nomsubcategoria =  $(this).attr('nomsubcategoria');
+			Parametros       = {'idcategoria':$idcategoria, 'idsubcategoria':$idsubcategoria, 'nomsubcategoria':$nomsubcategoria};
 		 Mostrar_Productos_x_Sub_Categoria(Parametros);
 });
+
+function Buscar_Informacion_Producto (Parametros)
+{
+			$.ajax({
+					data:  Parametros,
+					dataType: 'html',
+					url:      '/balquimia/productos/buscar_producto/',
+					type:     'post',
+     success:  function (resultado)
+    	 {
+    	 		$('.contenido-descripcion').html('');
+    	 		$('.contenido-descripcion').html(resultado);
+    	 }
+					});
+}
 
 function Mostrar_Productos_x_Categoria(Parametros)
 {

@@ -7,24 +7,27 @@
                   <img src="<?= BASE_IMG_LINEA_SELEC.$this->Imagen_Cabecera  ;?>" class="img-responsive img-linea-seleccionada">
                 </div><!-- IMG = Linea Seleccionada -->
 
-                <div><!-- Titulo -->
-                     <h4 class="titulo_linea_seleccionada">Linea Alimentaria</h4>
-                </div><!-- Titulo -->
 
               </div>
+
+            <div class="contenido-descripcion">
+
+                <div><!-- Titulo -->
+                     <h4 class="titulo_linea_seleccionada"><?=$this->Texto_SubCategoria?></h4>
+                </div><!-- Titulo -->
 
               <div class="col-lg-12 col-md-12 col-sm-12">
                    <div class="cont-presentacion-productos">
                         <!-- ======( Fila De Productos )====== -->
                           <div class="row">
-
                               <?php
                               foreach ($this->Productos as $Producto)
                               {
-                                $nomproducto = $Producto['nomproducto']
+                                $nomproducto = $Producto['nomproducto'];
+                                $idproducto  = $Producto['idproducto'];
                                 ?>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                 <div class="producto">
+                                 <div class="producto" id="<?=$idproducto ;?>">
                                   <?= $nomproducto ;?>
                                 </div>
                               </div>
@@ -34,6 +37,9 @@
                         <!-- ======( Fila De Productos )====== -->
                    </div>
               </div>
+
+              </div>
+
             </div><!-- Contenedor -->
           </div>
         </div>

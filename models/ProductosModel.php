@@ -33,6 +33,12 @@
 					return 	$Productos;
 				}
 
+				public function Productos_x_Buscar_por_IdProducto($idproducto)
+				{
+					$Productos = $this->Db->Ejecutar_Sp("balquimia_productos_buscar_por_idproducto($idproducto)");
+					return 	$Productos;
+				}
+
 
 
 
