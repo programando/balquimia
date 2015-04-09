@@ -1,7 +1,12 @@
 
+//$elemento = $('.titulos_panel').data('id');
+//alert($elemento);
+//$('.titulos_panel').click();
+
+
 $('.contenido_interno').on('click','.producto',function(){
 		$idproducto = $(this).attr('id');
-		Parametros = {'idproducto':$idproducto };
+		Parametros  = {'idproducto':$idproducto };
 		Buscar_Informacion_Producto(Parametros);
 })
 
@@ -9,14 +14,13 @@ $('.titulos_panel').on('click',function(){
 		$idcategoria = $(this).attr('idcategoria');
 		Parametros   = {'idcategoria':$idcategoria};
 		Mostrar_Productos_x_Categoria(Parametros );
-
 });
 
 $('.list-productos').on('click',function(){
 			$idsubcategoria  =  $(this).attr('idsubcategoria');
 			$idcategoria     =  $(this).attr('idcategoria');
 			$nomsubcategoria =  $(this).attr('nomsubcategoria');
-			Parametros       = {'idcategoria':$idcategoria, 'idsubcategoria':$idsubcategoria, 'nomsubcategoria':$nomsubcategoria};
+			Parametros       =  {'idcategoria':$idcategoria, 'idsubcategoria':$idsubcategoria, 'nomsubcategoria':$nomsubcategoria};
 		 Mostrar_Productos_x_Sub_Categoria(Parametros);
 });
 

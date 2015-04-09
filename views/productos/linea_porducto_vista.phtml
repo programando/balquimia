@@ -27,14 +27,17 @@
               <div class="panel"><!--Panel -->
                <div class="panel-heading cabezera-panel">
                  <h4 class="panel-title">
-                  <a class="titulos_panel" href="#<?=$id ;?>" data-toggle="collapse"   data-parent="#accordion"
-                    idcategoria= <?=$idcategoria ;?> >
+                  <a class="titulos_panel" data-id="<?=$id ;?>"  href="#<?=$id ;?>"
+                    data-toggle ="collapse"
+                    data-parent ="#accordion"
+                    idcategoria = <?=$idcategoria ;?> >
+
                     <?= $nomcategoria ;?>
                   </a><!-- titulo -->
                 </h4>
               </div>
               <?php if ($i==1) :;?>
-                <div id="<?=$id ;?>" class="panel-collapse collapse in"><!-- Cuerpo del panel -->
+                <div id="<?=$id ;?>" class="panel-collapse collapse"><!-- Cuerpo del panel in-->
                 <?php else :;?>
                   <div id="<?=$id ;?>" class="panel-collapse collapse"><!--  Cuerpo del panel -->
                   <?php endif;?>
