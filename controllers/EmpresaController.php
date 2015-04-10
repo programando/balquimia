@@ -5,6 +5,7 @@
       public function __construct()
       {
           parent::__construct();
+          $this->Productos = $this->Load_Model('Productos');
       }
     public function Index()
     {
@@ -49,6 +50,7 @@
 
     public function contactanos()
     {
+        $this->View->Categorias = $this->Productos->Categorias_Consultar();
         $this->View->SetCss(array('balk-contactenos','balk_estilos_generales'));
         $this->View->SetJs(array('balk-contactanos'));
         $this->View->Mostrar_Vista('contactenos');

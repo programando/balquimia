@@ -1,102 +1,108 @@
 // Validacion De formulario = Contactanos
 
-$(document).ready(function(){
-
-
-var $nombre1    = $('#nombre_completo');
-
-$('#nombre_completo').on('focus',function(){
-  $nombre1.css('background','white') ;
-  $nombre1.css('color','black') ;
-  $nombre1.val('');
-
-})
-
-	  $('#btn_enviar_datos').on('click',function(){
-
-								var $nombre    = $('#nombre_completo').val();  // Nombre Completo
-								var $ciudad    = $('#ciudad').val();           // Ciudad
-								var $pais      = $('#pais').val();             // Pais
-								var $empresa   = $('#empresa').val();          // Empresa
-								var $actividad = $('#actividad-empresa').val();// Activida de La Empesa
-								var $cargo     = $('#cargo').val();            // Cargo
-								var $email     = $('#email').val();            // Email
-								var $telefono  = $('#telefono').val();         // Telefono
-								var $mensaje   = $('#mensaje').val();          // Mensaje
-
-
-if ($nombre1.val()=='')
-{
-  $nombre1.css('background','red') ;
-  $nombre1.css('color','white') ;
-  $nombre1.val('Registre el nombre');
-}
+var $nombre       = $('#nombre_completo');  // Nombre Completo
+var $ciudad       = $('#ciudad');           // Ciudad
+var $pais         = $('#pais');             // Pais
+var $empresa      = $('#empresa');          // Empresa
+var $actividad    = $('#actividad-empresa');// Activida de La Empesa
+var $cargo        = $('#cargo');            // Cargo
+var $email        = $('#email');            // Email
+var $telefono     = $('#telefono');         // Telefono
+var $mensaje      = $('#mensaje');          // Mensaje
+var $linea        = $('#linea');
+var $tipo_mensaje = $('#tipo_mensaje');
+var $mensaje      = $('#mensaje');
 
 
 
-            if($ciudad  == ''){
-               $('#msj-validacion-ciudad').fadeIn();
-               $('#ciudad').focus();
-               return false;
-            }else{
-               $('#msj-validacion-ciudad').fadeOut();
-            }
-
-            if($pais   == ''){
-               $('#msj-validacion-pais').fadeIn();
-               $('#pais').focus();
-               return false;
-            }else{
-               $('#msj-validacion-pais').fadeOut();
-            }
-
-            if($empresa  == ''){
-               $('#msj-validacion-empresa').fadeIn();
-               $('#empresa').focus();
-               return false;
-            }else{
-               $('#msj-validacion-empresa').fadeOut();
-            }
-            if($actividad  == ''){
-               $('#msj-validacion-actividad').fadeIn();
-               $('#actividad-empresa').focus();
-               return false;
-            }else{
-               $('#msj-validacion-actividad').fadeOut();
-            }
-
-            if($cargo  == ''){
-               $('#msj-validacion-cargo').fadeIn();
-               $('#cargo').focus();
-               return false;
-            }else{
-               $('#msj-validacion-cargo').fadeOut();
-            }
-
-            if($email  == ''){
-               $('#msj-validacion-email').fadeIn();
-               $('#email').focus();
-               return false;
-            }else{
-               $('#msj-validacion-email').fadeOut();
-            }
-
-            if($telefono  == ''){
-               $('#msj-validacion-telefono').fadeIn();
-               $('#telefono').focus();
-               return false;
-            }else{
-               $('#msj-validacion-telefono').fadeOut();
-            }
-
-            if($mensaje  == ''){
-               $('#msj-validacion-mensaje').fadeIn();
-               $('#mensaje').focus();
-               return false;
-            }else{
-               $('#msj-validacion-mensaje').fadeOut();
-            }
-
-	  });
+$nombre.on('focus',function(){
+  if ( $nombre.val() == 'Registre el nombre') {
+     $nombre.css('background','white') ;
+     $nombre.css('color','black') ;
+     $nombre.val('');
+  }
 });
+
+
+$email.on('focus',function(){
+   if ( $email.val() == 'Registre el email')
+   {
+     $email.css('background','white') ;
+     $email.css('color','black') ;
+     $email.val('');
+   }
+});
+
+$telefono.on('focus',function(){
+   if ( $telefono.val() == 'Registre número telefónico' ) {
+     $telefono.css('background','white') ;
+     $telefono.css('color','black') ;
+     $telefono.val('');
+   }
+});
+
+$linea.on('focus',function(){
+     $linea.css('background','white') ;
+     $linea.css('color','black') ;
+     $linea.val('');
+});
+
+$tipo_mensaje.on('focus',function(){
+     $tipo_mensaje.css('background','white') ;
+     $tipo_mensaje.css('color','black') ;
+     $tipo_mensaje.val('');
+});
+
+$mensaje.on('focus',function(){
+   if ( $mensaje.val() == 'Registre el mensaje que desea enviar' ) {
+     $mensaje.css('background','white') ;
+     $mensaje.css('color','black') ;
+     $mensaje.val('');
+   }
+});
+
+
+
+
+
+$('#btn_enviar_datos').on('click',function()
+{
+   if ( $nombre.val()=='' ) {
+        $nombre.css('background','#FF3333') ;
+        $nombre.css('color','white') ;
+        $nombre.val('Registre el nombre');
+   }
+   if ( $email.val()=='' ) {
+        $email.css('background','#FF3333') ;
+        $email.css('color','white') ;
+        $email.val('Registre el email');
+   }
+
+   if ( $telefono .val() == '') {
+        $telefono.css('background','#FF3333') ;
+        $telefono.css('color','white') ;
+        $telefono.val('Registre número telefónico');
+   }
+    if ( $linea.val() == "Seleccione..." ){
+         $linea.css('background','#FF3333') ;
+         $linea.css('color','white') ;
+    }
+
+    if ( $tipo_mensaje.val() == "Seleccione..." ){
+         $tipo_mensaje.css('background','#FF3333') ;
+         $tipo_mensaje.css('color','white') ;
+   }
+
+    if ( $mensaje.val() == '' ){
+         $mensaje.css('background','#FF3333') ;
+         $mensaje.css('color','white') ;
+         $mensaje.val('Registre el mensaje que desea enviar');
+   }
+
+
+
+
+
+});
+
 
