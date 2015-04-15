@@ -84,6 +84,10 @@ ______ Barra = Contactos ______
 	  margin-bottom: -1px;
 }
 
+.correo_contactarnos
+{
+	    color: black;
+}
 
 /*
 ______ Btn = Enviar_Datos ______
@@ -92,7 +96,7 @@ ______ Btn = Enviar_Datos ______
 .btn-enviar-datos
 {
 	   display: block;
-	   padding: 5px;
+	   padding: 6px;
 	   width: 12%;
 	   min-width: 120px;
     float: right;
