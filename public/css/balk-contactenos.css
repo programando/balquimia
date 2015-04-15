@@ -46,8 +46,13 @@ _______ Msj = Validacion ______
 }
 
 /*
-____ Text Label = Formulario _____
+____ Formulario _____
 */
+
+.cont-formulario
+{
+	   margin-top: -10px;
+}
 
 .text-label
 {
@@ -100,17 +105,14 @@ ______ Barra = Contactos ______
 ______ Btn = Enviar_Datos ______
 */
 
-.cont-btn-datos-enviar
-{
-	   text-align: center;
-}
-
 .btn-enviar-datos
 {
 	   display: block;
 	   padding: 5px;
 	   width: 12%;
 	   min-width: 120px;
+    float: right;
+    margin-top:10px;
 
 	   color: white;
 	   background: #c76b38;
@@ -119,7 +121,6 @@ ______ Btn = Enviar_Datos ______
 	   -webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
 	   border-radius: 4px;
-	   margin: 15px auto;
 }
 
 .btn-enviar-datos:hover
@@ -128,26 +129,5 @@ ______ Btn = Enviar_Datos ______
 	   background: #f27f41;
 }
 
-/**/
 
-.img_contactanos2
-{
-	   display: block;
-	   width: 45%;
-	   margin: 10px 0px;
-    float: right;
-	   -webkit-border-radius: 8px;
-	   -moz-border-radius: 8px;
-	   border-radius: 8px;
-}
 
-.img_contactanos1
-{
-	   display: block;
-	   width: 55%;
-	   margin: 10px auto;
-
-	   -webkit-border-radius: 8px;
-	   -moz-border-radius: 8px;
-	   border-radius: 8px;
-}

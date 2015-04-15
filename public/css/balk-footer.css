@@ -1,17 +1,16 @@
-.cont-footer
-{
-	   background: #c76b38;
-	   color:  white;
-	   text-align: center;
-	   padding: 10px;
-	   display: block;
-    width: 100%;
-
-}
-
 .footer_balquimia
 {
-    display: block;
-    bottom: 0px;
-    width: 100%;
+					display: block;
+
+					background: #c76b38;
+					color:  white;
+					text-align: center;
+					padding: 7px;
+					display: block;
+     font-size: 12px;
+     margin: 0px auto;
+					width: 97.8%;
+					position: fixed;
+					bottom: 0;
+					z-index: 1000;
 }

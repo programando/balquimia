@@ -5,15 +5,22 @@
 
 }
 
-/*
-_____
-      Efecto Activo en el menu  _______
-*/
 .cont-slider-top
 {
 	   width: 80%;
 	   margin: 0px auto;
 }
+
+.img_slider_left
+{
+     height: 450px;
+     width: 100%;
+}
+
+/*
+_____
+      Efecto Activo en el menu  _______
+*/
 
 .uno_balk  /* = Nuestra Empresa */
 {
