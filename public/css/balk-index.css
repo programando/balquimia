@@ -10,9 +10,13 @@ _______ Slider _________
 
 .cont-slider
 {
+	    width: 70%;
+	    margin: 0px auto;
+}
 
-  margin-bottom: -5px;
-  margin-top: 5px;
+#img_slider_index
+{
+	    height: 330px;
 }
 
 /*

@@ -79,27 +79,11 @@ ______ Barra = Contactos ______
 .titulo_linea
 {
 	  font-weight: bold;
-	  text-align: left;
 	  color: #c76b38;
 	  display: block;
 	  margin-bottom: -1px;
 }
 
-.Puntos
-{
-		  font-weight: bold;
-	   color: #c76b38;
-	   display: block;
-	   margin-bottom: -1px;
-
-}
-
-.correo_contacto
-{
-	   text-decoration: underline;
-    display: block;
-    margin-bottom: -1px;
-}
 
 /*
 ______ Btn = Enviar_Datos ______
