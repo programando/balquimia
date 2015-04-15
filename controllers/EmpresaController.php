@@ -61,7 +61,6 @@
       $nombre          = General_Functions::Validar_Entrada('nombre','TEXT');
       $ciudad          = General_Functions::Validar_Entrada('ciudad','TEXT');
       $empresa         = General_Functions::Validar_Entrada('empresa','TEXT');
-      $actividad       = General_Functions::Validar_Entrada('actividad','TEXT');
       $cargo           = General_Functions::Validar_Entrada('cargo','TEXT');
       $Email           = General_Functions::Validar_Entrada('email_amigo','TEXT');
       $Email_Ok        = General_Functions::Validar_Entrada('email_amigo','EMAIL');
@@ -95,7 +94,7 @@
       if ( strlen($Texto_Respuesta) > 0 ) {
         echo $Texto_Respuesta;
       }else{
-        $Paramertros = compact('nombre','ciudad','empresa','actividad','cargo','Email','telefono','mensaje','linea','tipo_mensaje');
+        $Paramertros = compact('nombre','ciudad','empresa','cargo','Email','telefono','mensaje','linea','tipo_mensaje');
         $this->Email->Enviar_Correo_Contacto($Paramertros);
       }
 

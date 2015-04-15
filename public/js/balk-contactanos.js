@@ -3,13 +3,14 @@
 var $nombre       = $('#nombre_completo');  // Nombre Completo
 var $ciudad       = $('#ciudad');           // Ciudad
 var $empresa      = $('#empresa');          // Empresa
-var $actividad    = $('#actividad-empresa');// Activida de La Empesa
+
 var $cargo        = $('#cargo');            // Cargo
 var $email        = $('#email');            // Email
 var $telefono     = $('#telefono');         // Telefono
 var $mensaje      = $('#mensaje');          // Mensaje
 var $linea        = $('#linea');
 var $tipo_mensaje = $('#tipo_mensaje');
+
 
 
 
@@ -21,7 +22,6 @@ $nombre.on('focus',function(){
      $nombre.val('');
   }
 });
-
 
 $email.on('focus',function(){
    if ( $email.val() == 'Registre el email')
@@ -61,12 +61,10 @@ $mensaje.on('focus',function(){
 });
 
 
-
-
-
 $('#btn_enviar_datos').on('click',function()
 {
    $campos_validados = true ;
+
    if ( $nombre.val()=='' ) {
         $nombre.css('background','#FF3333') ;
         $nombre.css('color','white') ;
@@ -106,26 +104,17 @@ $('#btn_enviar_datos').on('click',function()
    }
 
    if ( $campos_validados == true ){
-         Parametros = {'nombre':$nombre, 'ciudad':$ciudad ,'empresa':$empresa, 'actividad':$actividad, 'cargo':$cargo,
-                       'email':$email ,'telefono':$telefono, 'mensaje':$mensaje, 'linea':$linea  , 'tipo_mensaje':$tipo_mensaje ,
-                           }
-         Enviar_Correo_Electronico( Parametros );
+         Parametros = {'nombre':$nombre, 'ciudad':$ciudad ,'empresa':$empresa,  'cargo':$cargo,
+                       'email':$email ,'telefono':$telefono, 'mensaje':$mensaje, 'linea':$linea  ,
+                       'tipo_mensaje':$tipo_mensaje }
+
+         //Enviar_Correo_Electronico( Parametros );
    }
 
-
-   function Enviar_Correo_Electronico(Parametros){
-      $.ajax({
-            data:  Parametros,
-            dataType: 'json',
-            url:      '/balquimia/empresa/enviar_correo/',
-            type:     'post',
-            success:  function (resultado)
-            {
-
-            }
-         });
-      }
-
 });
+
+
+
+
 
 

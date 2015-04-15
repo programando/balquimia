@@ -27,7 +27,6 @@
       $nombre          = General_Functions::Validar_Entrada('nombre','TEXT');
       $ciudad          = General_Functions::Validar_Entrada('ciudad','TEXT');
       $empresa         = General_Functions::Validar_Entrada('empresa','TEXT');
-      $actividad       = General_Functions::Validar_Entrada('actividad','TEXT');
       $cargo           = General_Functions::Validar_Entrada('cargo','TEXT');
       $Email           = General_Functions::Validar_Entrada('email_amigo','TEXT');
       $Email_Ok        = General_Functions::Validar_Entrada('email_amigo','EMAIL');
@@ -37,20 +36,20 @@
       $tipo_mensaje    = General_Functions::Validar_Entrada('tipo_mensaje','TEXT');
       */
 
-        $Texto_Correo     = str_replace(" #Pie_Pagina#"    , $Pie_Pagina  ,$Texto_Correo);
+        $Texto_Correo     =  "texto correo";
 
-        $this->Configurar_Cuenta('Recomendación de ' .$Nombre_Quien_Envia );
-        $this->Email->AddAddress($Email_Amigo );
+        $this->Configurar_Cuenta("correo de prueba" );
+        $this->Email->AddAddress('jhonjamesmg@Photmail.com' );
 
         $this->Email->Body = $Texto_Correo;
 
         if ( $this->Email->Send())
         {
           $this->Email->clearAddresses();
-          return "correoOK";
+          echo "correoOK";
         }else
         {
-         return "correo_No_OK";
+         echo "correo_No_OK";
         }
 
       }
