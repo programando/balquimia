@@ -15,6 +15,7 @@ var $tipo_mensaje = $('#tipo_mensaje');
 
 
 
+
 $nombre.on('focus',function(){
   if ( $nombre.val() == 'Registre el nombre') {
      $nombre.css('background','white') ;
@@ -104,11 +105,20 @@ $('#btn_enviar_datos').on('click',function()
    }
 
    if ( $campos_validados == true ){
-         Parametros = {'nombre':$nombre, 'ciudad':$ciudad ,'empresa':$empresa,  'cargo':$cargo,
-                       'email':$email ,'telefono':$telefono, 'mensaje':$mensaje, 'linea':$linea  ,
-                       'tipo_mensaje':$tipo_mensaje }
+         Parametros = {'nombre':$nombre.val(), 'ciudad':$ciudad.val() ,'empresa':$empresa.val(),  'cargo':$cargo.val(),
+                       'email':$email.val() ,'telefono':$telefono.val(), 'mensaje':$mensaje.val(), 'linea':$linea.val()  ,
+                       'tipo_mensaje':$tipo_mensaje.val() };
 
-         //Enviar_Correo_Electronico( Parametros );
+        $.ajax({
+              data:  Parametros,
+              dataType: 'text',
+              url:      '/balquimia/Empresa/enviar_correo/',
+              type:     'post',
+          success:  function (resultado)
+           {
+                alert(resultado);
+           }
+        });
    }
 
 });

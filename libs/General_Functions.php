@@ -35,6 +35,7 @@
 										case 'EMAIL':
 
 											$Email_Recibido = $Clave_Recibida;
+
 											$Clave_Recibida =  filter_var($Clave_Recibida, FILTER_VALIDATE_EMAIL) && preg_match('/@.+\./', $Clave_Recibida);
 											if ($Clave_Recibida == true)
 													{

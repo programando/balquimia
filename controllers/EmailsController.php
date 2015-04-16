@@ -23,23 +23,18 @@
       {
        extract($Parametros);
 
-    /*
-      $nombre          = General_Functions::Validar_Entrada('nombre','TEXT');
-      $ciudad          = General_Functions::Validar_Entrada('ciudad','TEXT');
-      $empresa         = General_Functions::Validar_Entrada('empresa','TEXT');
-      $cargo           = General_Functions::Validar_Entrada('cargo','TEXT');
-      $Email           = General_Functions::Validar_Entrada('email_amigo','TEXT');
-      $Email_Ok        = General_Functions::Validar_Entrada('email_amigo','EMAIL');
-      $telefono        = General_Functions::Validar_Entrada('telefono','TEXT');
-      $mensaje         = General_Functions::Validar_Entrada('mensaje','TEXT');
-      $linea           = General_Functions::Validar_Entrada('linea','TEXT');
-      $tipo_mensaje    = General_Functions::Validar_Entrada('tipo_mensaje','TEXT');
-      */
+        $Texto_Correo     =  "NOMBRE : " . $nombre .'<br>';
+        $Texto_Correo     = $Texto_Correo . "CIUDAD : " . $ciudad .'<br>';
+        $Texto_Correo     = $Texto_Correo . "EMPRESA : ". $empresa .'<br>';
+        $Texto_Correo     = $Texto_Correo . "CARGO : ". $cargo .'<br>';
+        $Texto_Correo     = $Texto_Correo . "TELÉFONO : " .  $telefono .'<br>';
+        $Texto_Correo     = $Texto_Correo . "LÍNEA DE INTERÉS : " . $linea  .'<br>';
+        $Texto_Correo     = $Texto_Correo . "TIPO DE MENSAJE : " . $tipo_mensaje .'<br>';
+        $Texto_Correo     = $Texto_Correo . "MENSAJE : " .'<br>'.$mensaje .'<br>';
 
-        $Texto_Correo     =  "texto correo";
 
-        $this->Configurar_Cuenta("correo de prueba" );
-        $this->Email->AddAddress('jhonjamesmg@Photmail.com' );
+        $this->Configurar_Cuenta("Contacto Usuario Página Bqlquimia");
+        $this->Email->AddAddress($Email );
 
         $this->Email->Body = $Texto_Correo;
 
@@ -69,8 +64,8 @@
 									$this->Email->SMTPSecure  = 'ssl';                            // sets the prefix to the servier
 									$this->Email->Host        = 'smtp.gmail.com';      				 		// sets GMAIL as the SMTP server
 									$this->Email->Port        = '465';                              // set the SMTP port
-									$this->Email->Username    = CORREO_01;								// GMAIL username
-									$this->Email->Password    = CORREO_01_PASS;            	 					// GMAIL password
+									$this->Email->Username    = CORREO;								// GMAIL username
+									$this->Email->Password    = CORREO_PASS;            	 					// GMAIL password
 									$this->Email->From        = '';
 									$this->Email->FromName    = '';
 									$this->Email->Subject     = $asunto;
