@@ -22,15 +22,16 @@
             {
               $nomcategoria = trim($Categorias['nomcategoria']);
               $idcategoria  = $Categorias['idcategoria'];
-              $id           = 'categoria'.$idcategoria;
+              $id           = $idcategoria;
               ?>
               <div class="panel"><!--Panel -->
                <div class="panel-heading cabezera-panel">
                  <h4 class="panel-title">
-                  <a class="titulos_panel" data-id="<?=$id ;?>"  href="#<?=$id ;?>"
-                    data-toggle ="collapse"
-                    data-parent ="#accordion"
-                    idcategoria = <?=$idcategoria ;?> >
+                  <a href="#<?=$idcategoria ;?>"
+                     class="titulos_panel" data-id="<?=$id ;?>"
+                     data-toggle ="collapse"
+                     data-parent ="#accordion"
+                     idcategoria = <?=$idcategoria ;?> >
 
                     <?= $nomcategoria ;?>
                   </a><!-- titulo -->
@@ -116,3 +117,7 @@
       </div>
     </div>
   </div><!-- Cont = Principal -->
+  <br />
+  <br />
+    <br />
+  <br />

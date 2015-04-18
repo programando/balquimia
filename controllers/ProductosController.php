@@ -50,7 +50,7 @@
     }
 
 
-    public function productos_por_categoria($idcategoria )
+    public function productos_por_categoria($idcategoria)
     {/**  ABRIL 06 DE 2015
       *       INICIA LA PRESENTACION DE PRODUCTOS EN CADA UNA DE LAS CATEGORIAS. MUESTRA INICIALMENTE, LOS PRODUCTOS DE ALIMENTARIA
       */
@@ -65,6 +65,22 @@
         $this->View->Mostrar_Vista('linea_porducto_vista');
     }
 
+    public function productos_por_categoria_ajax()
+    {/**  ABRIL 06 DE 2015
+      *       INICIA LA PRESENTACION DE PRODUCTOS EN CADA UNA DE LAS CATEGORIAS. MUESTRA INICIALMENTE, LOS PRODUCTOS DE ALIMENTARIA
+      */
+        $idcategoria                    = General_Functions::Validar_Entrada('idcategoria','NUM');
+        $this->View->Texto_SubCategoria ='Todos los Productos';
+        $this->View->Categorias         = $this->Productos->Categorias_Consultar();
+        $this->View->SubCategorias      = $this->Productos->SubCategorias_Consultar();
+        $this->View->Productos          = $this->Productos->Productos_x_Categoria($idcategoria);
+        $this->View->Imagen_Cabecera    = $idcategoria.'.png';
+
+        $this->View->SetCss(array('balk-linea_productos','balk_linea_porducto_vista','balk_estilos_generales'));
+        $this->View->SetJs(array('balk_velocidad_slider','balk_lineas'));
+        $this->View->Mostrar_Vista_Parcial('linea_porducto_vista_parcial');
+    }
+
 
     public function productos_subcategorias()
     {
@@ -72,10 +88,11 @@
       $idsubcategoria                 = General_Functions::Validar_Entrada('idsubcategoria','NUM');
       $nomsubcategoria                = General_Functions::Validar_Entrada('nomsubcategoria','TEXT');
       $this->View->Texto_SubCategoria = $nomsubcategoria ;
-      $this->View->Productos       = $this->Productos->Productos_x_SubCategoria($idsubcategoria);
+      $this->View->Imagen_Cabecera    = $idcategoria.'.png';
+      $this->View->Productos          = $this->Productos->Productos_x_SubCategoria($idsubcategoria);
       $this->View->SetCss(array('balk-linea_productos','balk_linea_porducto_vista','balk_estilos_generales'));
       $this->View->SetJs(array('balk_velocidad_slider','balk_lineas'));
-      $this->View->Imagen_Cabecera = $idcategoria.'.png';
+
       $this->View->Mostrar_Vista_Parcial('linea_porducto_vista_parcial');
     }
 

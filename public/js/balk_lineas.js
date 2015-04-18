@@ -1,8 +1,4 @@
 
-//$elemento = $('.titulos_panel').data('id');
-//alert($elemento);
-//$('.titulos_panel').click();
-
 
 $('.contenido_interno').on('click','.producto',function(){
 		$idproducto = $(this).attr('id');
@@ -20,6 +16,7 @@ $('.list-productos').on('click',function(){
 			$idsubcategoria  =  $(this).attr('idsubcategoria');
 			$idcategoria     =  $(this).attr('idcategoria');
 			$nomsubcategoria =  $(this).attr('nomsubcategoria');
+			$nomsubcategoria =  $.trim($nomsubcategoria);
 			Parametros       =  {'idcategoria':$idcategoria, 'idsubcategoria':$idsubcategoria, 'nomsubcategoria':$nomsubcategoria};
 		 Mostrar_Productos_x_Sub_Categoria(Parametros);
 });
@@ -29,7 +26,7 @@ function Buscar_Informacion_Producto (Parametros)
 			$.ajax({
 					data:  Parametros,
 					dataType: 'html',
-					url:      '/balquimia/productos/buscar_producto/',
+					url:      '/productos/buscar_producto/',
 					type:     'post',
      success:  function (resultado)
     	 {
@@ -44,7 +41,7 @@ function Mostrar_Productos_x_Categoria(Parametros)
 		$.ajax({
 					data:  Parametros,
 					dataType: 'html',
-					url:      '/balquimia/productos/linea_producto_vista/',
+					url:      '/productos/productos_por_categoria_ajax/',
 					type:     'post',
      success:  function (resultado)
     	 {
@@ -59,7 +56,7 @@ function Mostrar_Productos_x_Categoria(Parametros)
 		$.ajax({
 					data:  Parametros,
 					dataType: 'html',
-					url:      '/balquimia/productos/productos_subcategorias/',
+					url:      '/productos/productos_subcategorias/',
 					type:     'post',
      success:  function (resultado)
     	 {

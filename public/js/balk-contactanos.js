@@ -3,17 +3,13 @@
 var $nombre       = $('#nombre_completo');  // Nombre Completo
 var $ciudad       = $('#ciudad');           // Ciudad
 var $empresa      = $('#empresa');          // Empresa
-
 var $cargo        = $('#cargo');            // Cargo
 var $email        = $('#email');            // Email
 var $telefono     = $('#telefono');         // Telefono
 var $mensaje      = $('#mensaje');          // Mensaje
 var $linea        = $('#linea');
 var $tipo_mensaje = $('#tipo_mensaje');
-
-
-
-
+var $img_cargando = $('#img_cargando');
 
 
 $nombre.on('focus',function(){
@@ -108,15 +104,26 @@ $('#btn_enviar_datos').on('click',function()
          Parametros = {'nombre':$nombre.val(), 'ciudad':$ciudad.val() ,'empresa':$empresa.val(),  'cargo':$cargo.val(),
                        'email':$email.val() ,'telefono':$telefono.val(), 'mensaje':$mensaje.val(), 'linea':$linea.val()  ,
                        'tipo_mensaje':$tipo_mensaje.val() };
-
+        $img_cargando.css('display','block');
         $.ajax({
               data:  Parametros,
               dataType: 'text',
-              url:      '/balquimia/Empresa/enviar_correo/',
+              url:      '/Empresa/enviar_correo/',
               type:     'post',
           success:  function (resultado)
            {
-                alert(resultado);
+                $respuesta = $.trim(resultado);
+
+                if ($respuesta == 'correoOK') {
+                    $respuesta ='Correo enviado correctamente. Pronto haremos contacto con usted para atender su solicitud.<br> Gracias por contactarnos.';
+                  }
+                 if ($respuesta == 'correo_No_OK') {
+                    $respuesta ='El correo no pudo ser enviado. Inténtelo más tarde. El problema puede ser ocasionado por un fallo en la conexión.'
+                  }
+
+                $img_cargando.css('display','none');
+                $('.modal-body #texto').html($respuesta);
+                $('#ventana_mensaje').modal('show');
            }
         });
    }

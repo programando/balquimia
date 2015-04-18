@@ -13,9 +13,6 @@
       }
 
       public function Index() { }
-
-
-
       /**
        *
        */
@@ -33,7 +30,8 @@
         $Texto_Correo     = $Texto_Correo . "MENSAJE : " .'<br>'.$mensaje .'<br>';
 
 
-        $this->Configurar_Cuenta("Contacto Usuario Página Bqlquimia");
+
+        $this->Configurar_Cuenta("Contacto Usuario Página Balquimia");
         $this->Email->AddAddress($Email );
 
         $this->Email->Body = $Texto_Correo;
@@ -48,6 +46,33 @@
         }
 
       }
+
+      public function Correo()
+      {
+         $Texto_Correo    = "Correo de prueba". time();
+         mail('jhonjamesmg@hotmail.com', 'Mi título', $Texto_Correo);
+
+        /*  $this->Email->Body = $Texto_Correo;
+          $this->Configurar_Cuenta("Contacto Usuario Página Balquimia");
+          $this->Email->AddAddress('jhonjamesmg@hotmail.com' );
+
+
+          try {
+              $this->Email->Send();
+              $this->Email->clearAddresses();
+              echo "correoOK";
+            }  catch (phpmailerException $e) {
+                  echo $e->errorMessage(); //Pretty error messages from PHPMailer
+            } catch (Exception $e) {
+              echo $e->getMessage(); //Boring error messages from anything else!
+            }
+            */
+
+      }
+
+
+
+
 
 
       private function Configurar_Cuenta($asunto)

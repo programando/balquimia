@@ -3,6 +3,8 @@
                                   balk_estilos_generales.css
         *********** Contactanos ***********
     -->
+<?php include (APPLICATION_SECTIONS . 'ventana_mensaje.php');?>
+
     <div class="cont-info-pagina"><!-- Cont = Principal -->
         <div class="row">
 
@@ -163,7 +165,12 @@
        <button type="button" class="btn-enviar-datos" id="btn_enviar_datos">Enviar Datos</button>
    </div>
    <!-- botones = Enviar-datos -->
+   <div id="img_cargando" style="display: none;">
+     <img src="<?=BASE_IMG_CONTACTANOS ;?>cargando.gif" alt=""> Enviando mensaje...espere unos segundos...
+   </div>
+
  </form>
+
 </div>
 
 

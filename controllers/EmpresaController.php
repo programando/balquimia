@@ -69,6 +69,8 @@
       $linea           = General_Functions::Validar_Entrada('linea','TEXT');
       $tipo_mensaje    = General_Functions::Validar_Entrada('tipo_mensaje','TEXT');
 
+
+
       if ( strlen($nombre) == 0){
         $Texto_Respuesta ='Debe registrar el nombre de la persona que envía el correo.';
       }
@@ -94,6 +96,7 @@
       if ( strlen($Texto_Respuesta) > 0 ) {
         echo $Texto_Respuesta;
       }else{
+        echo "enviando";
         $Parametros = compact('nombre','ciudad','empresa','cargo','Email','telefono','mensaje','linea','tipo_mensaje');
         $this->Email->Enviar_Correo_Contacto($Parametros);
       }
