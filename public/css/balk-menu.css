@@ -5,6 +5,8 @@
 	   border: 1px solid #c76b38;
 }
 
+
+
 /*
 _____ Opciones del menu ______
 */
@@ -31,6 +33,9 @@ _____ Opciones del menu ______
 #menu .opciones-menu
 {
 	   color: white;
+	   margin-left: 0px;
+	   padding-left: 10px;
+	   padding-right: 10px;
 }
 
 #menu ul li

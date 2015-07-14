@@ -1,0 +1,15 @@
+.conte_porductos_hogar
+{
+	width: 90%;
+	margin: 0px auto;
+}
+
+.cuatro_balk
+{
+	background: #f27f41;
+	color     : white;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius   : 10px;
+	border-radius        : 10px;
+}

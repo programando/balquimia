@@ -96,6 +96,13 @@
       $this->View->Mostrar_Vista_Parcial('linea_porducto_vista_parcial');
     }
 
+    public function productos_para_hogar()
+     {
+
+       $this->View->SetCss(array('balk_productos_hogar','balk_estilos_generales'));
+       $this->View->SetJs(array('balk_velocidad_slider'));
+       $this->View->Mostrar_Vista('productos_hogar');
+     }
 
     public function linea_de_productos()
      {
