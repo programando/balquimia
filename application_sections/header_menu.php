@@ -16,10 +16,7 @@
 						        <span class="icon-bar"></span>
 						      </button>
 
-						      <a class="navbar-brand" href="#">
-						      	   <a href="<?=BASE_URL ;?>index" class="navbar-brand" id="navbar-brand-inicio">
-						      	   <span class="inicio  casa-inicio"></span></a><!-- Casita = Inicio -->
-						      </a>
+
 
 						    </div>
 
@@ -27,15 +24,51 @@
 						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 						    <!--- Campos de la pagina -->
-						      <ul class="nav navbar-nav">
-								<li class="uno_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/nuestra_empresa">Nuestra Empresa</a></li>
-								<li class="dos_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/desarrollo_de_productos">Desarrollo de Productos</a></li>
-								<li class="tres_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>productos/linea_de_productos">Productos Industriales     </a></li>
-								<li class="cuatro_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>productos/productos_para_hogar">Productos para el Hogar     </a></li>
-								<li class="cinco_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/contro_de_calidad">Control de Calidad     </a></li>
-								<li class="seis_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/nuestros_servicios">Nuestros Servicios     </a></li>
-								<li class="siete_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/nuestros_clientes">Nuestros Clientes      </a></li>
-								<li class="ocho_balk"><a class="opciones-menu" href="<?=  BASE_URL ;?>empresa/contactanos">Contáctenos            </a></li>
+						      <ul class="nav navbar-nav menu-ion">
+										      	<a href="<?=BASE_URL ;?>index" class="text-center <?php if ($_SESSION["folderDirect"] == "index") echo "selection"; ?>">
+										      			<li class=""><span class="inicio casa-inicio"></span>&nbsp; Inicio</li>
+										      	</a>
+
+																	<a class="text-center <?php if ($_SESSION["folderDirect"] == "nuestra_empresa") echo "selection"; ?>" href="<?=  BASE_URL ;?>empresa/nuestra_empresa">
+																			<li class="">Nuestra<br>Empresa</li>
+																	</a>
+
+																	<a class="text-center <?php if ($_SESSION["folderDirect"] == "desarrollo_productos") echo "selection"; ?>" href="<?=  BASE_URL ;?>empresa/desarrollo_de_productos">
+																			<li class="">Desarrollo<br>de Productos</li>
+																	</a>
+
+																	<a class="text-center <?php if ($_SESSION["folderDirect"] == "linea_productos") echo "selection"; ?>" href="<?=  BASE_URL ;?>productos/linea_de_productos">
+																			<li class="">Productos<br>Industriales</li>
+																	</a>
+
+																	<a class="text-center <?php if ($_SESSION["folderDirect"] == "control_calidad") echo "selection"; ?>" href="<?=  BASE_URL ;?>empresa/contro_de_calidad">
+																			<li class="">Control de<br>Calidad</li>
+																	</a>
+																	<a class="text-center <?php if ($_SESSION["folderDirect"] == "nuestro_servicios") echo "selection"; ?>" href="<?=  BASE_URL ;?>empresa/nuestros_servicios">
+																			<li class="">Nuestros<br>Servicios</li>
+																	</a>
+
+																	<a class="text-center <?php if ($_SESSION["folderDirect"] == "nuestros_clientes") echo "selection"; ?>" href="<?=  BASE_URL ;?>empresa/nuestros_clientes">
+																			<li class="">Nuestros<br>Clientes</li>
+																	</a>
+
+																	<li class="aTemp text-center">
+																			Catálogos<br>por Línea
+
+																			<ul>
+																				<li><a href="<?=  BASE_STATIC_FILES ;?>Presentacion-linea-alimentaria-balquimia-2016.pdf">Alimentaria</a></li>
+																				<li><a href="<?=  BASE_STATIC_FILES ;?>Presentacion-linea-automotriz-balquimia-2016.pdf"">Automotriz</a></li>
+																				<li><a href="<?=  BASE_STATIC_FILES ;?>Presentacion-linea-hotelera-balquimia-2016.pdf"">Hotelera</a></li>
+																				<li><a href="<?=  BASE_STATIC_FILES ;?>Presentacion-linea-industrial-balquimia-2016.pdf"">Industrial</a></li>
+																				<li><a href="<?=  BASE_STATIC_FILES ;?>Presentacion-linea-materias-primas-balquimia.pdf"">Materias Primas</a></li>
+																				<li><a href="<?=  BASE_STATIC_FILES ;?>Presentacion-linea-sanidad portatil-balquimia.pdf"">Sanidad Portátil</a></li>
+																			</ul>
+																	</li>
+
+
+																	<a class="text-center <?php if ($_SESSION["folderDirect"] == "contactenos") echo "selection"; ?>" href="<?=  BASE_URL ;?>empresa/contactanos">
+																			<li class="">Contáctenos</li>
+																	</a>
 						      </ul>
 						     <!--- Campos de la pagina -->
 
@@ -46,20 +79,4 @@
     </div><!-- Contenedor -->
 </div>
 
-<!--
-					***
-					Estas Clases las utilizamos para dar le elefecto activo a
-					los campos de l menu...en cada hoja de estilos de acuerdo
-					a la pagina se encentra un diseño el cual cumple
-					con la funcion e dar el efecto activo
-    ***
-
-					class ="uno_balk"    = Nuestra Empresa
-					class ="dos_balk"    = Desarrollo de Productos
-					class ="tres_balk    = Linea de Productos
-					class ="cuatro_balk" = Control  de Calidad
-					class ="cinco_balk"  = Nuestros Servicios
-					class ="seis_balk"   = Nuestros Clientes
-					class ="siete_balk"  = Contactanos
--->
 
