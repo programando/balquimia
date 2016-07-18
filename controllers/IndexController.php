@@ -18,10 +18,19 @@ class IndexController extends Controller
         $this->View->SetCss(array('balk-index'));
         $this->View->SetJs(array('balk_velocidad_slider'));
         $this->View->Mostrar_Vista('index');
+
+
+
     }
 
 
+
+
 }
+
+
+
+
 
 
 

@@ -30,7 +30,7 @@ _____ Opciones del menu ______
 			transition        : all 600ms ease;
 }
 
-#menu .opciones-menu
+#menu .aaaaopciones-menu
 {
 	   color: white;
 	   margin-left: 0px;
@@ -38,24 +38,100 @@ _____ Opciones del menu ______
 	   padding-right: 10px;
 }
 
-#menu ul li
+#menu .menu-ion
 {
-   margin-left: 5px;
-   display: block;
+   display: table !important;
+   width: 100% !important;
+   height: 60px !important;
+   margin:0 !important;
+   padding: 0 !important;
+   position: relative;
+   z-index: 10;
 }
 
-#menu ul li .opciones-menu:hover
+#menu .menu-ion a
+{
+
+   display: table-cell !important;
+   width: 11.11%  !important;
+   height: 100% !important;
+
+   margin:0 !important;
+   padding: 0 !important;
+   vertical-align: middle;
+   text-decoration: none;
+
+
+}
+
+.aTemp {
+			display: table-cell !important;
+   width: 11.11%  !important;
+   height: 100% !important;
+   margin:0 !important;
+   padding: 0 !important;
+   vertical-align: middle;
+   text-decoration: none;
+   line-height: 14px;
+   color     : white;
+   text-decoration: none;
+   position: relative;
+   float: none !important;
+
+
+}
+
+#menu .menu-ion a li
+{
+
+   line-height: 14px;
+   color     : white;
+   text-decoration: none;
+   position: relative;
+
+
+}
+
+#menu .menu-ion a:hover
 {
 			background: #f27f41;
 			color     : white;
-
-			-webkit-transition: all 600ms ease;
-			-moz-transition   : all 600ms ease;
-			transition        : all 600ms ease;
 }
 
-#menu ul li .opciones-menu:active
+#menu .menu-ion a.selection
 {
-				background: #f27f41;
-			color     : white;
+			background: #b94f16;
+			color     : #fff;
 }
+
+
+
+.aTemp ul {
+	display:none;
+	position:absolute;
+	min-width:190px;
+	top: 60px;
+	list-style: none;
+	margin:0 !important;
+ padding: 0 !important;
+ text-align: left;
+ background: #c76b38;
+}
+
+#menu .aTemp:hover > ul {
+	display:block;
+
+}
+
+#menu .aTemp ul li > a {
+		display: block !important;
+		padding: 15px !important;
+		width: 100% !important;
+		color: white;
+}
+#menu .aTemp ul li > a:hover {
+		display: block !important;
+}
+
+
+

@@ -39,6 +39,7 @@
          $RutaView     = ROOT .  'views' . DS  . $this->Controlador. DS . $vista . '.phtml';
          $RutaTemplate = ROOT .  'views' . DS . 'template.phtml';
          $RutaFooter   = ROOT .  'views' . DS . 'footer.phtml';
+         $_SESSION["folderDirect"] = $vista;
 
 
 
