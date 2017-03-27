@@ -18,6 +18,7 @@
         $Producto = $this->Productos->Productos_x_Buscar_por_IdProducto($idproducto );
         $this->View->NombreProducto              = $Producto[0]['nomproducto'];
         $this->View->Descripcion_Producto        = $Producto[0]['descripcion'];
+        $this->View->idproducto                  = $idproducto;
         $this->View->Mostrar_Vista_Parcial('descripcion_producto');
       }
 

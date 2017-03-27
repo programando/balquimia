@@ -1,13 +1,13 @@
-.cont-logo
-{
-		display    : block;
-}
-
-
-
-.logo_balk
-{
-		display    : block;
-		padding    : 5px;
-  max-width:750px;
-	}
+.cont-logo {
+	display : block;
+}
+
+
+
+.logo_balk {
+	display    	: block;
+	padding    	: 5px;
+	max-width 	: 750px;
+}
+
+

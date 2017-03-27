@@ -1,6 +1,3 @@
-
-
-
 <?php
 /**
  * SEP 10 DE 2014
@@ -20,10 +17,8 @@ class Bootstrap
         $Metodo          = $peticion->getMetodo();
         $args            = $peticion->getArgs();
 
-
-
-
-        if(is_readable($RutaControlador))
+ 
+        if(is_readable( $RutaControlador ))
         {
             require_once $RutaControlador;
             $Controller = new $Controller;
@@ -37,7 +32,6 @@ class Bootstrap
             }
             // Desde aqui se carga el contraolador con o sin argumentos.... carpeta controllers
             if(isset($args)){
-                // Debug::Mostrar($args);
                 call_user_func_array(array($Controller, $Metodo), $args);
             }
             else{
@@ -46,6 +40,7 @@ class Bootstrap
 
         } else {
             throw new Exception(header('Location: ' . BASE_URL .'views/error/404.php'));
+             
 
         }
     }

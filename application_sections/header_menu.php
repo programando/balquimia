@@ -57,6 +57,7 @@
 
 																			<ul>
 																				<li><a href="<?=  BASE_STATIC_FILES ;?>Presentacion-linea-alimentaria-balquimia-2016.pdf">Alimentaria</a></li>
+																				<li><a href="<?=  BASE_STATIC_FILES ;?>Presentacion-linea-artes-graficas-balquimia.pdf"">Artes Gráficas</a></li>
 																				<li><a href="<?=  BASE_STATIC_FILES ;?>Presentacion-linea-automotriz-balquimia-2016.pdf"">Automotriz</a></li>
 																				<li><a href="<?=  BASE_STATIC_FILES ;?>Presentacion-linea-hotelera-balquimia-2016.pdf"">Hotelera</a></li>
 																				<li><a href="<?=  BASE_STATIC_FILES ;?>Presentacion-linea-industrial-balquimia-2016.pdf"">Industrial</a></li>

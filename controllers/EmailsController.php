@@ -49,10 +49,8 @@
 
       public function Correo()
       {
-         $Texto_Correo    = "Correo de prueba". time();
-         mail('jhonjamesmg@hotmail.com', 'Mi título', $Texto_Correo);
-
-        /*  $this->Email->Body = $Texto_Correo;
+         $Texto_Correo    = "Correo de prueba";
+          $this->Email->Body = $Texto_Correo;
           $this->Configurar_Cuenta("Contacto Usuario Página Balquimia");
           $this->Email->AddAddress('jhonjamesmg@hotmail.com' );
 
@@ -66,7 +64,6 @@
             } catch (Exception $e) {
               echo $e->getMessage(); //Boring error messages from anything else!
             }
-            */
 
       }
 

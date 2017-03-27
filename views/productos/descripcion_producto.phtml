@@ -1,7 +1,12 @@
 
+
 <div><!-- Titulo -->
+
    <h4 class="titulo_linea_seleccionada"><?=$this->NombreProducto ;?></h4>
+
  </div><!-- Titulo -->
+
+
 
 <div class="col-lg-12 col-md-12 col-sm-12">
 	   <div>
@@ -9,6 +14,48 @@
               <?=$this->Descripcion_Producto ;?>
 	   	    </p>
 	   </div>
+
+       <br><br><br>
+
+       <style>
+
+       		.btn-ion {
+
+				background:#0052a4; color:#FFFFFF;
+
+				padding:10px 20px; text-transform:uppercase;
+
+				font-weight:bold; text-decoration:none !important;
+
+			}
+
+			.btn-ion:hover {
+
+				background:#00366b; color:#fff; text-decoration:none;
+
+			}
+
+       </style>
+
+
+
+       <div class="text-right" style="padding-right:10%;">
+
+           <a href="<?=BASE_URL_TRON;?>productos/Busqueda_Producto_Compra_Online/<?=$this->NombreProducto;?>" target="_blank" class="btn-ion">
+
+                Comprar Online
+
+           </a>
+
+       </div>
+
+
+
+
+
 </div>
+
+
+
 
 

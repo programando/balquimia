@@ -39,9 +39,8 @@
          $RutaView     = ROOT .  'views' . DS  . $this->Controlador. DS . $vista . '.phtml';
          $RutaTemplate = ROOT .  'views' . DS . 'template.phtml';
          $RutaFooter   = ROOT .  'views' . DS . 'footer.phtml';
-         $_SESSION["folderDirect"] = $vista;
 
-
+            
 
              if(is_readable($RutaView))
             {
@@ -54,7 +53,7 @@
 
             }
             else {
-                //Debug::Mostrar($RutaView);
+               // Debug::Mostrar($RutaView);
                 throw new Exception(header('Location: ' . BASE_URL .'error/404.php'));
             }
 
@@ -76,7 +75,8 @@
                require_once ($RutaView);
             }
             else {
-                throw new Exception(header('Location: ' . BASE_URL .'error/404.php'));
+               Debug::Mostrar($RutaView);
+               // throw new Exception(header('Location: ' . BASE_URL .'error/404.php'));
             }
           }
 

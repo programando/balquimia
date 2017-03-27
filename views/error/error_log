@@ -1,0 +1,1 @@
+[30-Jan-2016 11:54:39] PHP Fatal error:  Using $this when not in object context in /home7/balquimi/public_html/views/error/index.phtml on line 2

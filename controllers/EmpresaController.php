@@ -10,7 +10,6 @@
       }
     public function Index()
     {
-
     }
 
      public function nuestra_empresa()
@@ -18,8 +17,6 @@
        $this->View->SetCss(array('balk-nuestra_empresa','balk_estilos_generales'));
        $this->View->SetJs(array('balk_velocidad_slider'));
        $this->View->Mostrar_Vista('nuestra_empresa');
-
-
      }
 
      public function desarrollo_de_productos()
@@ -27,7 +24,6 @@
        $this->View->SetCss(array('balk_desarrollo_productos','balk_estilos_generales'));
        $this->View->SetJs(array('balk_velocidad_slider'));
        $this->View->Mostrar_Vista('desarrollo_productos');
-
      }
 
 
@@ -53,9 +49,12 @@
 
     public function contactanos()
     {
+        //echo "spsps"; 
         $this->View->Categorias = $this->Productos->Categorias_Consultar();
+        
         $this->View->SetCss(array('balk-contactenos','balk_estilos_generales'));
         $this->View->SetJs(array('balk-contactanos'));
+
         $this->View->Mostrar_Vista('contactenos');
     }
 

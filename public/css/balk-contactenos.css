@@ -10,7 +10,7 @@ _____
       Efecto Activo en el menu  _______
 */
 
-.ocho_balk/* =  Contactanos  */
+.siete_balk/* =  Contactanos  */
 {
 			background: #f27f41;
 			color     : white;
@@ -20,15 +20,6 @@ _____
 			border-radius        : 10px ;
 }
 
-.menu_balk/* =  Contactanos  */
-{
-			background: #f27f41;
-			color     : white;
-
-			-webkit-border-radius: 10px ;
-			-moz-border-radius   : 10px ;
-			border-radius        : 10px ;
-}
 
 
 /*

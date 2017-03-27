@@ -18,20 +18,20 @@
 
             <?php
             $i= 1;
+
             foreach ($this->Categorias as $Categorias)
             {
               $nomcategoria = trim($Categorias['nomcategoria']);
               $idcategoria  = $Categorias['idcategoria'];
-              $id           = $idcategoria;
+              $id           = 'categoria'.$idcategoria;
               ?>
               <div class="panel"><!--Panel -->
                <div class="panel-heading cabezera-panel">
                  <h4 class="panel-title">
-                  <a href="#<?=$idcategoria ;?>"
-                     class="titulos_panel" data-id="<?=$id ;?>"
-                     data-toggle ="collapse"
-                     data-parent ="#accordion"
-                     idcategoria = <?=$idcategoria ;?> >
+                  <a class="titulos_panel" data-id="<?=$id ;?>"  href="/#<?=$id ;?>"
+                    data-toggle ="collapse"
+                    data-parent ="#accordion"
+                    idcategoria = <?=$idcategoria ;?> >
 
                     <?= $nomcategoria ;?>
                   </a><!-- titulo -->

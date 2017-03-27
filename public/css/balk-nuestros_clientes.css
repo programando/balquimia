@@ -17,7 +17,7 @@ _____
       Efecto Activo en el menu  _______
 */
 
-.siete_balk /* = Nuestros Clientes */
+.seis_balk /* = Nuestros Clientes */
 {
 			background: #f27f41;
 			color     : white;
@@ -26,14 +26,3 @@ _____
 			-moz-border-radius   : 10px;
 			border-radius        : 10px;
 }
-
-.ocho_balk /* = Nuestros Clientes */
-{
-			background: #f27f41;
-			color     : white;
-
-			-webkit-border-radius: 10px;
-			-moz-border-radius   : 10px;
-			border-radius        : 10px;
-}
-

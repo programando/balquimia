@@ -1,5 +1,3 @@
-
-
 <?php
 class Database extends PDO
 {
@@ -7,17 +5,27 @@ class Database extends PDO
 
     public function __construct()
     {
-        $dsn    = 'mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER;
-        $user   = DB_USER;
-        $pw     = DB_PW;
-        $params = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
-        try
-        {
-            parent::__construct($dsn, $user, $pw, $params);
-        }
-            catch(PDOException $e) {
-            echo 'Connection failed: ' . $e->getMessage();
-        }
+        /*parent::__construct(
+                'mysql:host=' . DB_SERVER .
+                ';dbname='    . DB_NAME,
+                                DB_USER, DB_PW,
+                                array(  PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES ' . DB_CHAR ));
+                                PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION
+                                */
+    $dsn    = 'mysql:dbname=' . DB_NAME . ';host=' . DB_SERVER;
+    $user   = DB_USER;
+    $pw     = DB_PW;
+    $params = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
+    try
+    {
+        parent::__construct($dsn, $user, $pw, $params);
+        //$this->setAttribute($params);
+    }
+        catch(PDOException $e) {
+        echo 'Connection failed: ' . $e->getMessage();
+    }
+
+
     }
 
     public function Ejecutar_Sp($nombre_sp_y_parametros)
