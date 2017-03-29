@@ -4,24 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <?php
+    $FileVersion = rand(1,100);
+    $FileVersion = "v=".$FileVersion;
+  ?>
+
 
   <title> <?= APP_NAME ;?> </title>
       <!-- OCTUBRE 09 DE 2014 -> INCLUSIÓN DE ARCHIVOS CSS - REALACIONADOS CON LA VISTA EN PARTUCULAR QUE ESTOY CARGANDO
       ******************************************************************************************************************-->
       <!-- CSS de Bootstrap -->
       <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>bootstrap.min.css" media="screen" />
-
-      <!--
-      <link type="text/css" rel="stylesheet" href="<?=BASE_JQUERY_UI ;?>jquery-ui.css"  />
-      <link type="text/css" rel="stylesheet" href="<?=BASE_JQUERY_UI ;?>jquery-ui.structure.css"  />
-      <link type="text/css" rel="stylesheet" href="<?=BASE_JQUERY_UI ;?>jquery-ui.theme.css"  />
-      -->
-
+ 
 
       <?php  if(isset($this->Css) && !empty($this->Css))
       {
        foreach ($this->Css as $Archivo_Css) { ?>
-       <link type="text/css"  rel="stylesheet" href="<?= $Archivo_Css ;?>"   />
+       <link type="text/css"  rel="stylesheet" href="<?= $Archivo_Css ;?>?<?= $FileVersion ;?>"   />
        <?php }} ?>
       <!-- FIN INLCUSIÓN DE ARCHIVOS CSS
       *******************************************************************************************************************-->
@@ -52,11 +51,11 @@
 
       <!-- Llamado a los Estilos Css = Header , Footer -->
 
-         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-header_logo.css"  />      <!-- Logo -->
-         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-header_navegador.css"  /> <!-- Barra-Buscar -->
-         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-menu.css"  />             <!-- Menu -->
-         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>font_styles.css"  />           <!-- Font-Style -->
-         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-footer.css"  />           <!-- Footer -->
+         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-header_logo.css?<?= $FileVersion ;?>"  />      <!-- Logo -->
+         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-header_navegador.css?<?= $FileVersion ;?>"  /> <!-- Barra-Buscar -->
+         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-menu.css?<?= $FileVersion ;?>"  />             <!-- Menu -->
+         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>font_styles.css?<?= $FileVersion ;?>"  />           <!-- Font-Style -->
+         <link type="text/css" rel="stylesheet" href="<?=BASE_CSS ;?>balk-footer.css?<?= $FileVersion ;?>"  />           <!-- Footer -->
 
       <!-- Llamado a los Estilos Css = Header , Footer -->
 
@@ -76,7 +75,7 @@
       <?php  if(isset($this->Js) && !empty($this->Js))
       {
         foreach ($this->Js as $Archivo_Js){ ?>
-        <script   src="<?= $Archivo_Js ;?>" type="text/javascript">  </script>
+        <script  src="<?= $Archivo_Js ;?>?<?= $FileVersion ;?>" type="text/javascript"> </script>
         <?php }} ?>
     <!-- FIN INLCUSIÓN DE ARCHIVOS JS
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->

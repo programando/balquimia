@@ -10,23 +10,25 @@
 
     public function Index(){}
 
+
     public function buscar_producto()
     {/**  ABRIL 06 DE 2015
       *       INICIA LA PRESENTACION DE PRODUCTOS EN CADA UNA DE LAS CATEGORIAS. MUESTRA INICIALMENTE, LOS PRODUCTOS DE ALIMENTARIA
       */
-        $idproducto                              = General_Functions::Validar_Entrada('idproducto','NUM');
-        $Producto = $this->Productos->Productos_x_Buscar_por_IdProducto($idproducto );
+        $idproducto                              = General_Functions::Validar_Entrada('idproducto','TEXT');
+        $Producto = $this->Productos->Productos_x_Buscar_por_NomProducto($idproducto );
         $this->View->NombreProducto              = $Producto[0]['nomproducto'];
         $this->View->Descripcion_Producto        = $Producto[0]['descripcion'];
         $this->View->idproducto                  = $idproducto;
+        $this->View->Inactivo                    = $Producto[0]['inactivo'];
         $this->View->Mostrar_Vista_Parcial('descripcion_producto');
       }
 
 
-    public function linea_producto_vista()
+   /* public function linea_producto_vista()
     {/**  ABRIL 06 DE 2015
-      *       INICIA LA PRESENTACION DE PRODUCTOS EN CADA UNA DE LAS CATEGORIAS. MUESTRA INICIALMENTE, LOS PRODUCTOS DE ALIMENTARIA
-      */
+             INICIA LA PRESENTACION DE PRODUCTOS EN CADA UNA DE LAS CATEGORIAS. MUESTRA INICIALMENTE, LOS PRODUCTOS DE ALIMENTARIA
+
         $idcategoria                    = General_Functions::Validar_Entrada('idcategoria','NUM');
         $this->View->Categorias         = $this->Productos->Categorias_Consultar();
         $this->View->SubCategorias      = $this->Productos->SubCategorias_Consultar();
@@ -49,6 +51,7 @@
           $this->View->Mostrar_Vista_Parcial('linea_porducto_vista_parcial');
         }
     }
+*/
 
 
     public function productos_por_categoria($idcategoria)
@@ -65,6 +68,7 @@
         $this->View->SetJs(array('balk_velocidad_slider','balk_lineas'));
         $this->View->Mostrar_Vista('linea_porducto_vista');
     }
+
 
     public function productos_por_categoria_ajax()
     {/**  ABRIL 06 DE 2015

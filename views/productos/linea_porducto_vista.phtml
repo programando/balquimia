@@ -50,7 +50,7 @@
                         $nomsubcategoria     =  $SubCategorias['nomsubcategoria'];
                         $idcategoria_detalle = $SubCategorias['idcategoria'];
                         $idsubcategoria      = $SubCategorias['idsubcategoria'];
-                      if ($idcategoria == $idcategoria_detalle){
+                      if ( $idcategoria == $idcategoria_detalle){
                         ?>
                         <li><a class="list-productos"
                         idsubcategoria  = <?= $idsubcategoria ;?>
@@ -90,13 +90,12 @@
                         <div class="row">
 
                             <?php
-                            foreach ($this->Productos as $Producto)
-                            {
+                            foreach ($this->Productos as $Producto)  {
                               $nomproducto = $Producto['nomproducto'];
                               $idproducto  = $Producto['idproducto'];
                               ?>
                               <div class="col-lg-6 col-md-6 col-sm-6">
-                               <div class="producto"  id="<?=$idproducto ;?>" >
+                               <div class="producto"  id="<?= $nomproducto ;?>" >
                                 <?= $nomproducto ;?>
                               </div>
                             </div>

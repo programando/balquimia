@@ -39,6 +39,11 @@
 					return 	$Productos;
 				}
 
+				public function Productos_x_Buscar_por_NomProducto( $nombre_producto )
+				{
+					$Productos = $this->Db->Ejecutar_Sp("balquimia_productos_buscar_x_nom_producto ( '$nombre_producto' )");
+					return 	$Productos;
+				}
 
 
 
