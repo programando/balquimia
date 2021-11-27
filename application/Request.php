@@ -18,7 +18,7 @@ class Request
     public function __construct()
     {
         $this->url='';
-
+        
         if(!isset($_GET['url']))    { $this->url="";                }
         else                        { $this->url = $_GET['url'];    }
 
